@@ -1,0 +1,1390 @@
+// Desktop 1920x1080 Resize
+@media screen and (max-width: 1849px){
+	#fullWrapper{
+		#mbrtWrapper{
+			// Right Bars Navigator
+			#rightBarsNav{
+				height: 375px;
+			}
+
+			// Contact Section
+			.contactSection{
+				.contactLetter{
+					height: 390px;
+					.topBox{
+						height: 22.4%;
+
+						.contactTitle{
+							h1{
+								height: 70px;
+								font-size: 62px;
+							}
+						}
+					}
+
+					.bottomBox{
+						.contactColumns{
+							.indexRow{
+								height: 14%;
+
+								h5{
+									font-size: 33.2px;
+								}
+							}
+
+							.firstRow{
+								.innerHeadRow{
+									font-size: 24px;
+								}
+
+								.innerFootRow{
+									font-size: 19.1px;
+								}
+							}
+
+							.secondRow{
+								font-size: 19.1px;
+							}
+						}
+					}
+				}
+			}
+
+			// Intro Section
+			.introSection{
+				.introLetter{
+					width: 1260px;
+
+					.introTitle{
+						h1{
+							font-size: 67px;
+						}
+					}
+
+					.introParagraph{
+						p{
+							font-size: 24px;
+						}
+					}
+
+					.introQuotes{
+						height: 53px;
+
+						h2{
+							font-size: 36.6px;
+						}
+					}
+				}
+			}
+
+			// Welcome Section
+			#section-1{
+				#receiverLetter{
+					height: 615px;
+
+					.introTitle{
+						width: 860px;
+						margin-bottom: 26px;
+
+						.maskTitle{
+							h1{
+								width: 860px;
+							}
+						}
+					}
+
+					.introParagraph{
+						margin-bottom: 44.3px;
+					}
+
+					#welcomePara-1{
+						height: 135px;
+					}
+
+					.introQuotes{
+						margin-bottom: 38.5px;
+					}
+
+					#welcomeQuote-1{
+						width: 740px;
+
+						.maskTitle{
+							h2{
+								width: 740px;
+							}
+						}
+					}
+
+					#welcomeQuote-2{
+						width: 640px;
+
+						.maskTitle{
+							h2{
+								width: 640px;
+							}
+						}
+					}
+				}
+			}
+
+			// Services Section
+			#section-2{
+				#servicesLetter{
+					height: 650px;
+
+					.introTitle{
+						margin-bottom: 28.9px;
+					}
+
+					.introParagraph{
+						height: 83px;
+						margin-bottom: 50px;
+					}
+
+					.introQuotes{
+						margin-bottom: 40.4px;
+					}
+
+					#servicesList{
+						th{
+							font-size: 23.6px;
+							padding-bottom: 28.9px;
+						}
+
+						#column-1{
+							.maskTitle{
+								width: 110px;
+
+								.maskedText{
+									width: 110px;
+								}
+							}
+						}
+						#column-2{
+							.maskTitle{
+								width: 100px;
+
+								.maskedText{
+									width: 100px;
+								}
+							}
+						}
+						#column-3{
+							.maskTitle{
+								width: 280px;
+
+								.maskedText{
+									width: 280px;
+								}
+							}
+						}
+						#column-4{
+							.maskTitle{
+								width: 85px;
+
+								.maskedText{
+									width: 85px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Carousel Sections
+			.carouselSection{
+				.innerCarousel{
+					height: 810px;
+					
+					.carouselImages{
+						.projectsWrapper{
+							.projectPhoto{
+								.projectData{
+									.innerCenteredBox{
+										left: 13%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Vertical Carousel
+			.carouselVertSection{
+				.innerCarousel{
+					height: 93%;
+				}
+			}
+		}
+	}
+}
+
+// Desktop 1920x1080 Resize Intermediate Fix
+@media screen and (max-width: 1750px){
+	#fullWrapper{
+		#mbrtWrapper{
+			// Global Right Navigator
+			#rightBarsNav{
+				height: 350px;
+
+				.barsWrapper{
+					.navBar{
+						.navName{
+							font-size: 0.6em;
+						}
+					}
+				}
+			}
+
+			// Contact Section
+			.contactSection{
+				.contactLetter{
+					height: 360px;
+					.topBox{
+						.contactTitle{
+							h1{
+								height: 67px;
+								font-size: 58px;
+							}
+						}
+					}
+
+					.bottomBox{
+						.contactColumns{
+							.indexRow{
+								height: 13.5%;
+
+								h5{
+									font-size: 31.4px;
+								}
+							}
+
+							.firstRow{
+								.innerHeadRow{
+									font-size: 22.7px;
+								}
+
+								.innerFootRow{
+									font-size: 18.1px;
+								}
+							}
+
+							.secondRow{
+								font-size: 18.1px;
+							}
+						}
+					}
+				}
+			}
+
+			// Intro Section
+			.introSection{
+				.introLetter{
+					width: 1190px;
+
+					.introTitle{
+						height: 93px;
+
+						h1{
+							font-size: 63.4px;
+							height: 70px;
+						}
+					}
+
+					.introParagraph{
+						p{
+							font-size: 22.7px;
+						}
+					}
+
+					.introQuotes{
+						height: 50px;
+
+						h2{
+							font-size: 34.6px;
+						}
+					}
+				}
+			}
+
+			// Welcome Section
+			#section-1{
+				#receiverLetter{
+					height: 610px;
+
+					.introTitle{
+						width: 820px;
+						margin-bottom: 24.8px;
+
+						.maskTitle{
+							h1{
+								width: 820px;
+							}
+						}
+					}
+
+					.introParagraph{
+						margin-bottom: 41.9px;
+					}
+
+					#welcomePara-1{
+						height: 130px;
+					}
+
+					.introQuotes{
+						margin-bottom: 36.4px;
+					}
+
+					#welcomeQuote-1{
+						width: 700px;
+
+						.maskTitle{
+							h2{
+								width: 700px;
+							}
+						}
+					}
+
+					#welcomeQuote-2{
+						width: 600px;
+
+						.maskTitle{
+							h2{
+								width: 600px;
+							}
+						}
+					}
+				}
+			}
+
+			// Services Section
+			#section-2{
+				#servicesLetter{
+					height: 560px;
+
+					.introTitle{
+						margin-bottom: 27.3px;
+					}
+
+					.introParagraph{
+						height: 80px;
+						margin-bottom: 50px;
+					}
+
+					.introQuotes{
+						margin-bottom: 38.2px;
+					}
+
+					#servicesList{
+						th{
+							font-size: 22.3px;
+							padding-bottom: 27.3px;
+						}
+
+						
+						#column-3{
+							.maskTitle{
+								width: 260px;
+
+								.maskedText{
+									width: 260px;
+								}
+							}
+						}
+
+						td{
+							font-size: 8px;
+						}
+					}
+				}
+			}
+
+			// Carousel Sections
+			.carouselSection{
+				.innerCarousel{
+					height: 770px;
+
+					.carouselImages{
+						.projectsWrapper{
+							.projectPhoto{
+								.projectData{
+									.innerCenteredBox{
+										height: 34.5%;
+										left: 11%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Vertical Carousel
+			.carouselVertSection{
+				.innerCarousel{
+					height: 89%;
+				}
+			}
+		}
+	}
+}
+
+// Desktop 1920x1080 Resize
+@media screen and (max-width: 1649px){
+	#fullWrapper{
+		#mbrtWrapper{
+			// Right Bars Navigator
+			#rightBarsNav{
+				height: 305px;
+			}
+
+			// Vertical Carousel Section
+			.carouselVertSection{
+				.innerCarousel{
+					.carouselTitle{
+						h3{
+							width: 93%;
+							height: 48px;
+							font-size: 29.6px;
+						}
+					}
+
+					.dataWrapper{
+						.projectData{
+							.innerCenteredBox{
+								height: 18%;
+
+								h5{
+									font-size: 20px;
+								}
+
+								.shiftData{
+									height: 6.9%;
+									font-size: 17px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Contact Section
+			.contactSection{
+				.contactLetter{
+					height: 320px;
+					.topBox{
+						height: 22.2%;
+						
+						.contactTitle{
+							h1{
+								height: 57px;
+								font-size: 50px;
+							}
+						}
+
+						.contactButton{
+							a{
+								font-size: 18px;
+							}
+						}
+					}
+
+					.bottomBox{
+						.contactColumns{
+							.indexRow{
+								height: 13.5%;
+
+								h5{
+									font-size: 29.6px;
+								}
+							}
+
+							.firstRow{
+								.innerHeadRow{
+									font-size: 21.5px;
+								}
+
+								.innerFootRow{
+									font-size: 17.1px;
+								}
+							}
+
+							.secondRow{
+								font-size: 17.1px;
+							}
+						}
+					}
+				}
+			}
+
+			// Intro Section
+			.introSection{
+				.introLetter{
+					width: 1120px;
+
+					.introTitle{
+						height: 90px;
+
+						h1{
+							font-size: 59.8px;
+						}
+					}
+
+					.introParagraph{
+						p{
+							font-size: 21.5px;
+						}
+					}
+
+					.introQuotes{
+						height: 48px;
+
+						h2{
+							font-size: 32.6px;
+						}
+					}
+				}
+			}
+
+			// Welcome Section
+			#section-1{
+				#receiverLetter{
+					height: 580px;
+
+					.introTitle{
+						width: 780px;
+						margin-bottom: 23.2px;
+
+						.maskTitle{
+							h1{
+								width: 780px;
+							}
+						}
+					}
+
+					.introParagraph{
+						margin-bottom: 39.5px;
+					}
+
+					#welcomePara-1{
+						height: 122px;
+					}
+
+					#welcomePara-2, #welcomePara-3{
+						height: 52px;
+					}
+
+					.introQuotes{
+						margin-bottom: 34.3px;
+					}
+
+					#welcomeQuote-1{
+						width: 660px;
+
+						.maskTitle{
+							h2{
+								width: 660px;
+							}
+						}
+					}
+
+					#welcomeQuote-2{
+						width: 570px;
+
+						.maskTitle{
+							h2{
+								width: 570px;
+							}
+						}
+					}
+				}
+			}
+
+			// Services Section
+			#section-2{
+				#servicesLetter{
+					height: 540px;
+
+					.introTitle{
+						margin-bottom: 25.7px;
+					}
+
+					.introParagraph{
+						height: 75px;
+						margin-bottom: 45px;
+					}
+
+					.introQuotes{
+						margin-bottom: 36px;
+					}
+
+					#servicesList{
+						th{
+							font-size: 18.9px;
+							padding-bottom: 25.7px;
+						}
+
+						#column-1{
+							.maskTitle{
+								width: 95px;
+
+								.maskedText{
+									width: 95px;
+								}
+							}
+						}
+						#column-2{
+							.maskTitle{
+								width: 85px;
+
+								.maskedText{
+									width: 85px;
+								}
+							}
+						}
+						#column-3{
+							.maskTitle{
+								width: 225px;
+
+								.maskedText{
+									width: 225px;
+								}
+							}
+						}
+						#column-4{
+							.maskTitle{
+								width: 70px;
+
+								.maskedText{
+									width: 70px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Carousel Sections
+			.carouselSection{
+				.innerCarousel{
+					height: 730px;
+					
+					.carouselImages{
+						.projectsWrapper{
+							.projectPhoto{
+								.projectData{
+									.innerCenteredBox{
+										left: 9%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Vertical Carousel
+			.carouselVertSection{
+				.innerCarousel{
+					height: 86%;
+				}
+			}
+		}
+	}
+}
+
+// Desktop 1920x1080 Resize Intermediate Fix
+@media screen and (max-width: 1400px){
+	#fullWrapper{
+		#mbrtWrapper{
+			// Global Right Navigator
+			#rightBarsNav{
+				height: 370px;
+
+				.barsWrapper{
+					.navBar{
+						margin-bottom: 50%;
+
+						.navName{
+							font-size: 7px;
+						}
+					}
+				}
+			}
+
+			// Contact Section
+			.contactSection{
+				.contactLetter{
+					height: 285px;
+					.topBox{
+						.contactTitle{
+							h1{
+								height: 52px;
+								font-size: 45px;
+							}
+						}
+					}
+
+					.bottomBox{
+						.contactColumns{
+							.indexRow{
+								height: 11%;
+
+								h5{
+									font-size: 25.1px;
+								}
+							}
+
+							.firstRow{
+								.innerHeadRow{
+									font-size: 18.2px;
+								}
+
+								.innerFootRow{
+									font-size: 14.5px;
+								}
+							}
+
+							.secondRow{
+								font-size: 14.5px;
+							}
+						}
+					}
+				}
+			}
+
+			// Intro Section
+			.introSection{
+				.introLetter{
+					width: 950px;
+
+					.introTitle{
+						height: 70px;
+						line-height: 4.5em;
+
+						h1{
+							font-size: 50.7px;
+							height: 62px;
+						}
+					}
+
+					.introParagraph{
+						p{
+							font-size: 18.2px;
+						}
+					}
+
+					.introQuotes{
+						height: 42px;
+
+						h2{
+							font-size: 27.7px;
+						}
+					}
+				}
+			}
+
+			// Welcome Section
+			#section-1{
+				#receiverLetter{
+					height: 510px;
+
+					.introTitle{
+						width: 680px;
+						margin-bottom: 19.6px;
+
+						.maskTitle{
+							h1{
+								width: 680px;
+							}
+						}
+					}
+
+					.introParagraph{
+						margin-bottom: 33.5px;
+					}
+
+					#welcomePara-1{
+						height: 105px;
+					}
+
+					#welcomePara-2, #welcomePara-3{
+						height: 45px;
+					}
+
+					.introQuotes{
+						margin-bottom: 29.1px;
+					}
+
+					#welcomeQuote-1{
+						width: 560px;
+
+						.maskTitle{
+							h2{
+								width: 560px;
+							}
+						}
+					}
+
+					#welcomeQuote-2{
+						width: 480px;
+
+						.maskTitle{
+							h2{
+								width: 480px;
+							}
+						}
+					}
+				}
+			}
+
+			// Services Section
+			#section-2{
+				#servicesLetter{
+					height: 500px;
+
+					.introTitle{
+						margin-bottom: 21.8px;
+					}
+
+					.introParagraph{
+						height: 65px;
+						margin-bottom: 40px;
+					}
+
+					.introQuotes{
+						margin-bottom: 30.6px;
+					}
+
+					#servicesList{
+						th{
+							font-size: 17.3px;
+							padding-bottom: 21.8px;
+						}
+
+						#column-3{
+							.maskTitle{
+								width: 205px;
+
+								.maskedText{
+									width: 205px;
+								}
+							}
+						}
+						
+					}
+				}
+			}
+
+			// Carousel Sections
+			.carouselSection{
+				.innerCarousel{
+					height: 620px;
+					
+					.carouselImages{
+						.projectsWrapper{
+							.projectPhoto{
+								.projectData{
+									.innerCenteredBox{
+										height: 38.5%;
+										left: 7%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Vertical Carousel
+			.carouselVertSection{
+				.innerCarousel{
+					height: 79%;
+				}
+			}
+		}
+	}
+}
+
+// Laptop and Tablet Min Size
+@media screen and (max-width: 1279px){
+	#fullWrapper{
+		#mbrtWrapper{
+			// Global Right Navigator
+			#rightBarsNav{
+				height: 320px;
+
+				.barsWrapper{
+					.navBar{
+						margin-bottom: 58%;
+					}
+				}
+			}
+
+			// Cover Section
+			.coverSection{
+				.nameSection{
+					height: 65px;
+					line-height: 3.5em;
+					h1{
+						height: 50px;
+						font-size: 45px;
+					}
+				}
+			}
+
+			// Carousel Section
+			.carouselSection{
+				.innerCarousel{
+					height: 570px;
+
+					.carouselTitle{
+						font-size: 23.8px;
+					}
+
+					.carouselImages{
+						.projectsWrapper{
+							.projectPhoto{
+								.projectData{
+									.innerCenteredBox{
+										height: 31.8%;
+										left: 5%;
+
+										h5{
+											font-size: 16.9px;
+										}
+
+										p{
+											height: 6.5%;
+											font-size: 14px;
+										}
+									}
+
+									.visitWebsite{
+										width: 105px;
+										height: 23px;
+										line-height: 1.4em;
+										bottom: 15%;
+
+										a{
+											font-size: 10.5px;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.projectsBars{
+						height: 2px;
+
+						ul{
+							.singleBar{
+								margin-left: 3px;
+								margin-right: 3px;
+							}
+						}
+
+						.fiveBarsList{
+							li{
+								width: calc(20% - 6px);
+							}
+						}
+
+						.twoBarsList{
+							li{
+								width: calc(50% - 6px);
+							}
+						}
+
+						.sixBarsList{
+							li{
+								width: calc(16.66% - 6px);
+							}
+						}
+
+						.threeBarsList{
+							li{
+								width: calc(33.33% - 6px);
+							}
+						}
+
+						.eightBarsList{
+							li{
+								width: calc(12.5% - 6px);
+							}
+						}
+
+						.fourBarsList{
+							li{
+								width: calc(25% - 6px);
+							}
+						}
+					}
+				}
+			}
+
+			// Vertical Carousel Section
+			.carouselVertSection{
+				.innerCarousel{
+					height: 77%;
+					min-height: 590px;
+
+					.carouselTitle{
+						h3{
+							width: 100%;
+							height: 34px;
+							font-size: 22px;
+						}
+					}
+
+					.dataWrapper{
+						.projectData{
+							.innerCenteredBox{
+								height: 12.5%;
+
+								h5{
+									font-size: 16.9px;
+								}
+
+								.shiftData{
+									height: 6.4%;
+									font-size: 14px;
+								}
+							}
+						}
+					}
+
+					.projectsBars{
+						height: 2px;
+
+						ul{
+							.singleBar{
+								margin-left: 3px;
+								margin-right: 3px;
+							}
+						}
+
+						.sixBarsList{
+							li{
+								width: calc(16.66% - 6px);
+							}
+						}
+					}
+				}
+			}
+
+			// Contact Section
+			.contactSection{
+				.contactLetter{
+					height: 240px;
+					.topBox{
+						height: 20.5%;
+
+						.contactTitle{
+							h1{
+								height: 43px;
+								font-size: 36px;
+							}
+						}
+
+						.contactButton{
+							a{
+								font-size: 13px;
+							}
+						}
+					}
+
+					.bottomBox{
+						.contactColumns{
+							.indexRow{
+								height: 10%;
+								
+								h5{
+									font-size: 23px;
+								}
+							}
+
+							.firstRow{
+								.innerHeadRow{
+									font-size: 16.6px;
+								}
+
+								.innerFootRow{
+									font-size: 13.2px;
+								}
+							}
+
+							.secondRow{
+								font-size: 13.2px;
+							}
+						}
+					}
+				}
+			}
+
+			// Intro Section
+			.introSection{
+				.introLetter{
+					width: 865px;
+
+					.introTitle{
+						height: 60px;
+						line-height: 4em;
+
+						h1{
+							font-size: 46.4px;
+							height: 54px;
+						}
+					}
+
+					.introParagraph{
+						p{
+							font-size: 15px;
+						}
+					}
+
+					.introQuotes{
+						height: 36px;
+
+						h2{
+							font-size: 25.3px;
+						}
+					}
+				}
+			}
+
+			// Welcome Section
+			#section-1{
+				#receiverLetter{
+					height: 470px;
+
+					.introTitle{
+						width: 610px;
+						margin-bottom: 18px;
+
+						.maskTitle{
+							h1{
+								width: 610px;
+							}
+						}
+					}
+
+					.introParagraph{
+						margin-bottom: 30.6px;
+					}
+
+					#welcomePara-1{
+						height: 95px;
+					}
+
+					#welcomePara-2, #welcomePara-3{
+						height: 40px;
+					}
+
+					.introQuotes{
+						margin-bottom: 26.6px;
+					}
+
+					#welcomeQuote-1{
+						width: 510px;
+
+						.maskTitle{
+							h2{
+								width: 510px;
+							}
+						}
+					}
+
+					#welcomeQuote-2{
+						width: 440px;
+
+						.maskTitle{
+							h2{
+								width: 440px;
+							}
+						}
+					}
+				}
+			}
+
+			// Services Section
+			#section-2{
+				#servicesLetter{
+					height: 440px;
+					
+					.introTitle{
+						margin-bottom: 20px;
+					}
+
+					.introParagraph{
+						height: 57px;
+						margin-bottom: 30px;
+					}
+
+					.introQuotes{
+						margin-bottom: 28px;
+					}
+
+					#servicesList{
+						th{
+							font-size: 13.8px;
+							padding-bottom: 20px;
+						}
+
+						#column-1{
+							.maskTitle{
+								width: 70px;
+
+								.maskedText{
+									width: 70px;
+								}
+							}
+						}
+						#column-2{
+							.maskTitle{
+								width: 65px;
+
+								.maskedText{
+									width: 65px;
+								}
+							}
+						}
+						#column-3{
+							.maskTitle{
+								width: 165px;
+
+								.maskedText{
+									width: 165px;
+								}
+							}
+						}
+						#column-4{
+							.maskTitle{
+								width: 50px;
+
+								.maskedText{
+									width: 50px;
+								}
+							}
+						}
+
+						td{
+							font-size: 7px;
+						}
+					}
+				}
+			}
+
+			// Branding Cover
+			#section-3{
+				.nameSection{
+					width: 235px;
+				}
+			}
+
+			// Logos Carousel
+			#section-4{
+				.innerCarousel{
+					.carouselTitle{
+						width: 85px;
+					}
+				}
+			}
+
+			// Stationery Carousel
+			#section-5{
+				.innerCarousel{
+					.carouselTitle{
+						width: 140px;
+					}
+				}
+			}
+
+			// Brand Communications Cover
+			#section-6{
+				.nameSection{
+					width: 540px;
+				}
+			}
+
+			// Packaging Carousel
+			#section-7{
+				.innerCarousel{
+					.carouselTitle{
+						width: 390px;
+					}
+				}
+			}
+
+			// Uniforms Carousel
+			#section-8{
+				.innerCarousel{
+					.carouselTitle{
+						width: 330px;
+					}
+				}
+			}
+
+			// POS Carousel
+			#section-9{
+				.innerCarousel{
+					.carouselTitle{
+						width: 160px;
+					}
+				}
+			}
+
+			// Interiorism Carousel
+			#section-10{
+				.innerCarousel{
+					.carouselTitle{
+						width: 155px;
+					}
+				}
+			}
+
+			// Web Cover
+			#section-12{
+				.nameSection{
+					width: 650px;
+				}
+			}
+
+			// Lucky Carousel
+			#section-13{
+				.innerCarousel{
+					.carouselTitle{
+						width: 170px;
+					}
+				}
+			}
+
+			// Camila Carousel
+			#section-14{
+				.innerCarousel{
+					.carouselTitle{
+						width: 250px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Lower than Tablet Size
+@media screen and (max-width: 1023px){
+	#mobileWrapper{
+		display: block;
+	}
+}
+
+// Tablet Size but Vertical
+@media screen and (orientation: portrait) and (min-width: 768px){
+	#mobileWrapper{
+		.vertical{
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+.sprite{
+	background-image: url(../img/icons/sprite_nav.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
+.sprite-mouse{
+	width: 40px;
+    height: 65px;
+    background-position: -5px -90px;
+}
+
+.sprite-upKey{
+	width: 32px;
+    height: 32px;
+    background-position: -55px -5px;
+}
+.sprite-downKey{
+	width: 32px;
+    height: 32px;
+    background-position: -55px -42px;
+}
+.sprite-leftKey{
+	width: 32px;
+    height: 32px;
+    background-position: -55px -79px;
+}
+.sprite-rightKey{
+	width: 32px;
+    height: 32px;
+    background-position: -55px -116px;
+}
+
+.sprite-leftArrow{
+	width: 20px;
+    height: 35px;
+    background-position: -5px -5px;
+}
+.sprite-rightArrow{
+	width: 20px;
+    height: 35px;
+    background-position: -30px -5px;
+}
+
+.sprite-downArrow{
+	width: 40px;
+    height: 40px;
+    background-position: -5px -45px;
+}
+
+.sprite-DeviceDesk{
+	width: 100px;
+	height: 90px;
+	background-position: -92px -5px;
+}
+.sprite-DeviceLap{
+	width: 95px;
+	height: 68px;
+	background-position: -92px -100px;
+}
+.sprite-DeviceTab{
+	width: 70px;
+	height: 50px;
+	background-position: -5px -160px;
+}

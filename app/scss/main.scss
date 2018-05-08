@@ -1,22 +1,24 @@
 @import '_global/fonts.scss';
-@import '_global/vars.scss';
 @import '_global/mixins.scss';
+@import '_global/vars.scss';
+@import '_global/effects.scss';
+@import '_global/sprites.scss';
 
 @import '_views/home.scss';
 
 *{
 	margin: 0;
 	padding: 0;
-}
-
-body {
-  
+	@include lightFont();
 }
 
 h1{
 	@include lightFont();
 }
 
-h2{
+h2, p{
 	@include regularFont();
 }
+
+
+@import '_global/responsive.scss';

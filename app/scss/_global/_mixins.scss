@@ -1,0 +1,118 @@
+@mixin regularFont(){
+	font-family: 'Suisse-Regular', Sans-Serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin lightFont(){
+	font-family: 'Suisse-Light', Sans-Serif;
+	font-weight: 100;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin boxSizeFit(){
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+@mixin displayRight(){
+	position: relative;
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+@mixin displayLeft(){
+	position: relative;
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+@mixin transitions($timing){
+	-webkit-transition: all $timing cubic-bezier(.65,0,.25,1);
+	   -moz-transition: all $timing cubic-bezier(.65,0,.25,1);
+	    -ms-transition: all $timing cubic-bezier(.65,0,.25,1);
+	     -o-transition: all $timing cubic-bezier(.65,0,.25,1);
+	        transition: all $timing cubic-bezier(.65,0,.25,1);
+}
+
+@mixin trans-delayed($timing, $delay){
+	-webkit-transition: all $timing cubic-bezier(.65,0,.25,1) $delay;
+	   -moz-transition: all $timing cubic-bezier(.65,0,.25,1) $delay;
+	    -ms-transition: all $timing cubic-bezier(.65,0,.25,1) $delay;
+	     -o-transition: all $timing cubic-bezier(.65,0,.25,1) $delay;
+	        transition: all $timing cubic-bezier(.65,0,.25,1) $delay;
+}
+
+@mixin trans_title($timing){
+	-webkit-transition: all $timing cubic-bezier(.65,0,.25,1), color $timing cubic-bezier(.65,0,.25,1) $timing;
+	   -moz-transition: all $timing cubic-bezier(.65,0,.25,1), color $timing cubic-bezier(.65,0,.25,1) $timing;
+	    -ms-transition: all $timing cubic-bezier(.65,0,.25,1), color $timing cubic-bezier(.65,0,.25,1) $timing;
+	     -o-transition: all $timing cubic-bezier(.65,0,.25,1), color $timing cubic-bezier(.65,0,.25,1) $timing;
+	        transition: all $timing cubic-bezier(.65,0,.25,1), color $timing cubic-bezier(.65,0,.25,1) $timing;
+}
+
+@mixin trans_before_title($timing){
+	-webkit-transition: max-width $timing cubic-bezier(.65,0,.25,1);
+	   -moz-transition: max-width $timing cubic-bezier(.65,0,.25,1);
+	    -ms-transition: max-width $timing cubic-bezier(.65,0,.25,1);
+	     -o-transition: max-width $timing cubic-bezier(.65,0,.25,1);
+	        transition: max-width $timing cubic-bezier(.65,0,.25,1);
+}
+
+@mixin opacity($val){
+	opacity: $val;
+	filter: alpha(opacity=($val * 100));
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(($val * 100))';
+}
+
+@mixin writingBar(){
+	border-right: 4px solid rgba(151,151,155,1);
+	-webkit-animation: writingBar 0.8s ease infinite alternate;
+	   -moz-animation: writingBar 0.8s ease infinite alternate;
+	    -ms-animation: writingBar 0.8s ease infinite alternate;
+	     -o-animation: writingBar 0.8s ease infinite alternate;
+	        animation: writingBar 0.8s ease infinite alternate;
+}
+
+@-webkit-keyframes writingBar {
+	0% { border-right: 4px solid rgba(151,151,155,1); }
+	100% { border-right: 4px solid rgba(151,151,155,0); }
+}
+@-moz-keyframes writingBar {
+	0% { border-right: 4px solid rgba(151,151,155,1); }
+	100% { border-right: 4px solid rgba(151,151,155,0); }
+}
+@-ms-keyframes writingBar {
+	0% { border-right: 4px solid rgba(151,151,155,1); }
+	100% { border-right: 4px solid rgba(151,151,155,0); }
+}
+@-o-keyframes writingBar {
+	0% { border-right: 4px solid rgba(151,151,155,1); }
+	100% { border-right: 4px solid rgba(151,151,155,0); }
+}
+@keyframes writingBar {
+	0% { border-right: 4px solid rgba(151,151,155,1); }
+	100% { border-right: 4px solid rgba(151,151,155,0); }
+}
+
+@mixin blackHover(){
+	position: absolute;
+	overflow: hidden;
+	max-width: 0;
+	color: $black;
+	cursor: text;
+	content: attr(data-hover);
+	white-space: nowrap;
+	@include trans_before_title(1.2s);
+}
+

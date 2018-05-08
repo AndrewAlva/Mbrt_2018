@@ -1,7 +1,22 @@
+@import '_global/fonts.scss';
+@import '_global/vars.scss';
+@import '_global/mixins.scss';
+
+@import '_views/home.scss';
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body {
-  font-family: -apple-system, Sans-Serif;
-  text-align: center;
-  font-size: 24pt;
-  color: #fff;
-  background-color: #202020;
+  
+}
+
+h1{
+	@include lightFont();
+}
+
+h2{
+	@include regularFont();
 }

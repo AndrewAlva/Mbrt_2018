@@ -3,7 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+	Studio: Mandelbrot
+	From: CDMX, Mexico
+
+    Front End Developer: Andrew Alva
+    Instagram: @andrew__alva
+    From: Pachuca, Mexico
+
+    UI Designer: Zero Morales 
+    Instagram: @zero.alex
+    From: CDMX, Mexico
 
 # THANKS
 
@@ -11,5 +20,9 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    HTML5
+    CSS3
+    SASS
+    Javascript
+    jQuery
+    Brunch

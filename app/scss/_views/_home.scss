@@ -1,14 +1,13 @@
 .testSquare{
 	z-index: 1000000000;
 	position: absolute;
-	width: 100%;
-	height: 28px;
+	width: 42px;
+	height: 13px;
 	background-color: rgba(0,255,0,0.5);
 
 	margin: auto;
-	top: 0; 
-	bottom: 227px;
-	right: 0;
+	top: 54px;
+	right: 358px;
 }
 
 // GENERAL
@@ -30,28 +29,63 @@
 			text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 			color: $mid-gray;
 
-			#topLeftLogo{
+			#topMainNav{
 				position: fixed;
-				top: 2.5%;
-				left: 2.45%;
-				width: 9.37%;
-				height: 3.83%;
+				width: 100%;
+				height: 75px;
+				@include boxSizeFit();
+				padding: 0 80px;
 				z-index: 1000000;
-				cursor: pointer;
 
-				img{
+				#topLeftLogo{
 					position: absolute;
-					width: 100%;
+					width: 66px;
+					height: 21px;
+					bottom: 5px;
+					cursor: pointer;
+
+					img{
+						position: absolute;
+						width: 100%;
+					}
+				}
+
+				.topRightNav{
+					position: absolute;
+					display: block;
+					height: 25px;
+					right: 80px;
+					bottom: 0;
+					list-style: none;
+
+					.mainNavButtons{
+						position: relative;
+						display: inline-block;
+						text-transform: uppercase;
+						top: -2px;
+						margin-left: 40px;
+						font-size: 0.9em;
+
+						&:nth-child(1){
+							margin-left: 0;
+						}
+
+						a{
+							text-decoration: none;
+							color: $nav-light-gray-active;
+							@include transitions(0.4s);
+
+							&:hover{
+								color: black;
+							}
+						}
+					}
 				}
 			}
 
 			#rightBarsNav{
 				position: fixed;
-				// width: 3.85%;
 				width: 180px;
-				// height: 400px;
-				// margin: auto;
-				// top: 0; bottom: 0;
 				top: 50%;
 				@include translate(0, -50%);
 				right: 0;
@@ -65,7 +99,6 @@
 							}
 
 							.navName{
-								// width: 188%;
 								color: $nav-light-gray-active;
 							}
 						}
@@ -74,8 +107,6 @@
 
 				.barsWrapper{
 					position: relative;
-					// width: 100%;
-					// height: 100%;
 					margin: 0;
 					padding: 0;
 					text-align: right;
@@ -87,16 +118,12 @@
 						justify-content: flex-end;
 						width: 100%;
 						padding: 12px 0;
-						// height: 2px;
-						// margin-bottom: 36.3%;
 						cursor: pointer;
-						// background-color: $nav-light-gray-active;
 
 						@include translate(10px, 0);
 						@include transitions(0.6s);
 
 						&:hover{
-							// background-color: $nav-light-gray-deactive;
 							@include translate(0, 0);
 						}
 
@@ -119,17 +146,6 @@
 							@include transitions(0.6s);
 							font-size: 0.7em;
 							text-transform: uppercase;
-
-							// width: 305%;
-							// line-height: 1.2em;
-							// top: -0.62em;
-							// padding-right: 0;
-							// @include trans-delayed(0.6s, 0.2s);
-							
-							&:hover{
-								// color: $nav-black-active;
-								// padding-right: 30%;
-							}
 						}
 
 						.navLine{
@@ -147,8 +163,6 @@
 					}
 
 					.activeNavBar{
-						// width: 166.2%;
-						// background-color: $nav-black-active;
 						@include translate(0, 0);
 
 						.navNumber{
@@ -156,7 +170,6 @@
 						}
 
 						.navName{
-							// width: 188%;
 							color: $nav-black-active !important;
 						}
 

@@ -1,13 +1,13 @@
 .testSquare{
 	z-index: 1000000000;
 	position: absolute;
-	width: 42px;
-	height: 13px;
+	width: 100%;
+	height: 30px;
 	background-color: rgba(0,255,0,0.5);
 
 	margin: auto;
-	top: 54px;
-	right: 358px;
+	bottom: 141px;
+	left: 0;
 }
 
 // GENERAL
@@ -85,7 +85,7 @@
 
 			#rightBarsNav{
 				position: fixed;
-				width: 180px;
+				width: 130px;
 				top: 50%;
 				@include translate(0, -50%);
 				right: 0;
@@ -320,43 +320,24 @@
 			}
 
 			.carouselSection{
+				@include boxSizeFit();
+				padding: 6.9% 18.75%;
+
 				.innerCarousel{
-					position: absolute;
+					position: relative;
 					width: 100%;
-					height: 840px;
+					height: 100%;
 					margin: auto;
 					top: 0; bottom: 0;
-
-					.carouselTitle{
-						position: relative;
-						height: 70px;
-						line-height: 2em;
-						margin: auto;
-						margin-bottom: 9px;
-						left: 0; right: 0;
-						font-size: 34px;
-						color: $light-gray;
-						text-align: left;
-						@include transitions(0.6s);
-
-						h3{
-							margin: 0;
-							@include trans_title(0.9s);
-						}
-
-						h3:before{
-							@include blackHover();
-						}
-					}
 
 					.carouselImages{
 						position: relative;
 						width: 100%;
-						height: 77.6%;
+						height: 100%;
 
 						.projectsWrapper{
 							position: absolute;
-							width: 62.5%;
+							width: 100%;
 							height: 100%;
 							margin: auto;
 							left: 0; right: 0;
@@ -378,8 +359,10 @@
 								img{
 									position: absolute;
 									width: 100%;
+									height: 100%;
 									margin: auto;
 									top: 0; bottom: 0; left: 0; right: 0;
+									object-fit: cover;
 								}
 
 								.projectData{
@@ -486,14 +469,12 @@
 
 						.arrow{
 							position: absolute;
-							// width: 5.21%;
-							// height: 100%;
 							width: 60px;
 							height: 60px;
 							border-radius: 50%;
 							margin: auto;
 							top: 0; bottom: 0;
-							// @include dropShadow();
+							background-color: #fff;
 							@include transitions(0.6s);
 
 							&:hover{
@@ -521,13 +502,67 @@
 						}
 
 						.leftArrow{
-							left: 0;
-							right: 68.7%;
+							left: -13.34%;
 						}
 
 						.rightArrow{
-							left: 68.7%;
-							right: 0;
+							right: -13.34%;
+						}
+					}
+
+					.projectDetails{
+						position: absolute;
+						width: 100%;
+						bottom: -65px;
+						color: $black;
+
+						.description{
+							position: relative;
+							float: left;
+
+							.index, .name, .service{
+								position: relative;
+								display: inline-block;
+								vertical-align: top;
+								margin: 0;
+							}
+
+							.index{
+								font-size: 0.86em;
+							}
+							.name{
+								font-size: 2.45em;
+								line-height: 1em;
+								margin-left: 20px;
+								margin-right: 45px;
+							}
+							.service{
+								font-size: 0.88em;
+								line-height: 1.5em;
+								text-transform: uppercase;
+							}
+						}
+
+						.slideCounter{
+							position: relative;
+							float: right;
+
+							.currentSlide, .divider, .totalSlides{
+								position: relative;
+								display: inline-block;
+								vertical-align: top;
+								margin: 0;
+								font-size: 0.86em;
+							}
+
+							.divider{
+								width: 45px;
+								height: 1px;
+								top: 9px;
+								margin-left: 14px;
+								margin-right: 14px;
+								background-color: $black;
+							}
 						}
 					}
 
@@ -1123,6 +1158,62 @@
 				    -ms-transform: translateY(-100%);
 				     -o-transform: translateY(-100%);
 				        transform: translateY(-100%);
+		    }
+
+		    #rrssFooter{
+		    	z-index: 1000000;
+		    	position: fixed;
+		    	right: 80px;
+		    	bottom: 45px;
+
+		    	.rrssList{
+		    		height: 16px;
+		    		list-style: none;
+		    		margin: 0;
+		    		padding: 0;
+
+		    		.rrssIcon{
+		    			position: relative;
+		    			display: inline-block;
+		    			margin-left: 25px;
+
+		    			&:nth-child(1){
+		    				margin-left: 0;
+		    			}
+
+		    			a{
+		    				display: block;
+		    				text-decoration: none;
+		    				color: $black;
+		    				@include opacity(0.3);
+		    				@include transitions(0.6s);
+
+		    				&:hover{
+		    					@include opacity(1);
+		    				}
+		    			}
+
+		    			.rrssLogo{
+		    				background-image: url(/img/icons/sprite_rrss.png);
+		    				background-repeat: no-repeat;
+		    				height: 15px;
+		    				display: block;
+		    			}
+
+		    			.iFb{
+		    				width: 9px;
+		    				background-position: 0 0;
+		    			}
+		    			.iIg{
+		    				width: 16px;
+		    				background-position: -12px 0;
+		    			}
+		    			.iMail{
+		    				width: 20px;
+		    				background-position: -30px 0;
+		    			}
+		    		}
+		    	}
 		    }
 		}
 	}

@@ -4,7 +4,6 @@
 		#mbrtWrapper{
 			// Right Bars Navigator
 			#rightBarsNav{
-				// height: 375px;
 			}
 
 			// Contact Section
@@ -194,8 +193,6 @@
 			// Carousel Sections
 			.carouselSection{
 				.innerCarousel{
-					height: 810px;
-					
 					.carouselImages{
 						.projectsWrapper{
 							.projectPhoto{
@@ -226,8 +223,6 @@
 		#mbrtWrapper{
 			// Global Right Navigator
 			#rightBarsNav{
-				// height: 350px;
-
 				.barsWrapper{
 					.navBar{
 						.navName{
@@ -403,7 +398,6 @@
 			// Carousel Sections
 			.carouselSection{
 				.innerCarousel{
-					height: 770px;
 
 					.carouselImages{
 						.projectsWrapper{
@@ -436,7 +430,6 @@
 		#mbrtWrapper{
 			// Right Bars Navigator
 			#rightBarsNav{
-				// height: 305px;
 			}
 
 			// Vertical Carousel Section
@@ -668,7 +661,6 @@
 			// Carousel Sections
 			.carouselSection{
 				.innerCarousel{
-					height: 730px;
 					
 					.carouselImages{
 						.projectsWrapper{
@@ -700,12 +692,8 @@
 		#mbrtWrapper{
 			// Global Right Navigator
 			#rightBarsNav{
-				// height: 370px;
-
 				.barsWrapper{
 					.navBar{
-						margin-bottom: 50%;
-
 						.navName{
 							font-size: 7px;
 						}
@@ -880,7 +868,6 @@
 			// Carousel Sections
 			.carouselSection{
 				.innerCarousel{
-					height: 620px;
 					
 					.carouselImages{
 						.projectsWrapper{
@@ -911,15 +898,8 @@
 @media screen and (max-width: 1279px){
 	#fullWrapper{
 		#mbrtWrapper{
-			// Global Right Navigator
 			#rightBarsNav{
-				// height: 320px;
-
-				.barsWrapper{
-					.navBar{
-						margin-bottom: 58%;
-					}
-				}
+				width: 80px;
 			}
 
 			// Cover Section
@@ -936,9 +916,9 @@
 
 			// Carousel Section
 			.carouselSection{
-				.innerCarousel{
-					height: 570px;
+				padding: 13.5% 20%;
 
+				.innerCarousel{
 					.carouselTitle{
 						font-size: 23.8px;
 					}
@@ -972,6 +952,34 @@
 										}
 									}
 								}
+							}
+						}
+
+						.leftArrow{
+							left: -15%;
+						}
+						.rightArrow{
+							right: -15%;
+						}
+					}
+
+					.projectDetails{
+						font-size: 80%;
+						bottom: -50px;
+
+						.description{
+							.name{
+								margin-left: 10px;
+								margin-right: 25px;
+							}
+						}
+
+						.slideCounter{
+							.divider{
+								width: 30px;
+								top: 7px;
+								margin-left: 8px;
+								margin-right: 8px;
 							}
 						}
 					}
@@ -1369,6 +1377,11 @@
 					}
 				}
 			}
+
+			// Footer
+			#rrssFooter{
+				bottom: 20px;
+			}
 		}
 	}
 }
@@ -1385,6 +1398,101 @@
 	#mobileWrapper{
 		.vertical{
 			display: block;
+		}
+	}
+}
+
+// Mobile styling
+@media screen and (max-width: 767.98px){
+	#fullWrapper {
+		#mbrtWrapper{
+			#topMainNav{
+				height: 50px;
+				padding: 0 20px;
+				font-size: 80%;
+
+				.topRightNav{
+					height: 20px;
+					right: 20px;
+
+					.mainNavButtons{
+						margin-left: 10px;
+					}
+				}
+			}
+
+			#rightBarsNav{
+				.barsWrapper{
+					.navBar{
+						@include translate(7px, 0);
+
+						.navNumber, .navName{
+							display: none;
+						}
+					}
+
+					.activeNavBar{
+						@include translate(0, 0);
+					}
+				}
+			}
+
+			.carouselSection {
+				padding: 120px 20px;
+
+				.innerCarousel {
+					.carouselImages {
+						.arrow{
+							z-index: 1;
+							width: 40px;
+							height: 40px;
+							top: unset;
+							bottom: 5%;
+						}
+
+						.leftArrow{
+							left: -40%;
+							right: 0;
+						}
+						.rightArrow{
+							right: -40%;
+							left: 0;
+						}
+					}
+
+					.projectDetails{
+						font-size: 65%;
+						bottom: -60px;
+
+						.description{
+							.name{
+								margin-left: 2px;
+								margin-right: 5px;
+							}
+
+							.service{
+								display: block;
+								left: 16px;
+							}
+						}
+
+						.slideCounter{
+							position: absolute;
+							top: -15px;
+							right: 0;
+						}
+					}
+				}
+			}
+
+			#rrssFooter{
+				right: 20px;
+				.rrssList{
+					.rrssIcon{
+						margin-left: 10px;
+					}
+				}
+			}
 		}
 	}
 }

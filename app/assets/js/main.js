@@ -10,14 +10,14 @@
 		Slider.loading();
 
 		// Set and Initialize all carousels
-			var Logos = new Carousel('#section-4', '#logos-', '#logosBar-');
-			Logos.init();
+			var Franpos = new Carousel('#section-2', '#franpos-', '#franposBar-');
+			Franpos.init();
 
-			var Stationery = new Carousel('#section-5', '#stationery-', '#stationeryBar-');
-			Stationery.init();
+			var Ryan = new Carousel('#section-3', '#ryan-', '#ryanBar-');
+			Ryan.init();
 
-			var Packaging = new Carousel('#section-7', '#packaging-', '#packagingBar-');
-			Packaging.init();
+			var Milie = new Carousel('#section-4', '#milie-', '#milieBar-');
+			Milie.init();
 
 			var Uniforms = new Carousel('#section-8', '#uniforms-', '#uniformsBar-');
 			Uniforms.init();
@@ -85,16 +85,16 @@
 			function carouselNextProject(event){
 				event.preventDefault();
 				switch (Slider.sectionActive){
+					case 2:
+						Franpos.next();
+						break;
+
+					case 3:
+						Ryan.next();
+						break;
+
 					case 4:
-						Logos.next();
-						break;
-
-					case 5:
-						Stationery.next();
-						break;
-
-					case 7:
-						Packaging.next();
+						Milie.next();
 						break;
 
 					case 8:
@@ -126,16 +126,16 @@
 			function carouselPrevProject(event){
 				event.preventDefault();
 				switch (Slider.sectionActive){
+					case 2:
+						Franpos.prev();
+						break;
+
+					case 3:
+						Ryan.prev();
+						break;
+
 					case 4:
-						Logos.prev();
-						break;
-
-					case 5:
-						Stationery.prev();
-						break;
-
-					case 7:
-						Packaging.prev();
+						Milie.prev();
 						break;
 
 					case 8:
@@ -167,16 +167,16 @@
 			function carouselGoToProject(index){
 				
 				switch (Slider.sectionActive){
+					case 2:
+						Franpos.goTo(index);
+						break;
+
+					case 3:
+						Ryan.goTo(index);
+						break;
+
 					case 4:
-						Logos.goTo(index);
-						break;
-
-					case 5:
-						Stationery.goTo(index);
-						break;
-
-					case 7:
-						Packaging.goTo(index);
+						Milie.goTo(index);
 						break;
 
 					case 8:

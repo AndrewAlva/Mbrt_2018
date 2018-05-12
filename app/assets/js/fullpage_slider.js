@@ -21,13 +21,13 @@
 		screens: [],
 
 		// Set the names of all the screens
-		screenNames: ['index', 'welcome', 'services', 'branding', 'logos', 'stationery', 'communication', 'packaging', 'uniforms', 'pos', 'interiorism', 'advertising', 'web', 'lucky', 'camila', 'contact' ],
+		screenNames: ['index', 'hello', 'franpos', 'ryan-hicks', 'milie-marie', 'wellcome', 'lucky-ideas', 'das-lab', 'voxel' ],
 
 		// Set the titles of all the screens
 		screenTitles: ['', 'Hello there IA Interactive!', 'What We Do', 'Branding', '', '', 'Brand Communications', '', '', '', '', '', 'Web Design & Development', '', '', 'Then, We Work Together?' ],
 
 		// Set the screen covers id's
-		screenCovers: [3, 6, 12],
+		screenCovers: [],
 
 		// Set the slider main navigators objects
 		mainNavs: [],

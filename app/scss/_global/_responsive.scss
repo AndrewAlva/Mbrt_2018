@@ -1442,6 +1442,14 @@
 
 				.innerCarousel {
 					.carouselImages {
+						.projectsWrapper{
+							.projectPhoto{
+								.projectData{
+									display: none;
+								}
+							}
+						}
+
 						.arrow{
 							z-index: 1;
 							width: 40px;

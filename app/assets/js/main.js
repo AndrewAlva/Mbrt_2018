@@ -19,23 +19,17 @@
 			var Milie = new Carousel('#section-4', '#milie-', '#milieBar-');
 			Milie.init();
 
-			var Uniforms = new Carousel('#section-8', '#uniforms-', '#uniformsBar-');
-			Uniforms.init();
+			var Wellcome = new Carousel('#section-5', '#wellcome-', '#wellcomeBar-');
+			Wellcome.init();
 
-			var POS = new Carousel('#section-9', '#POS-', '#POSBar-');
-			POS.init();
-
-			var Interiorism = new Carousel('#section-10', '#interiorism-', '#interiorismBar-');
-			Interiorism.init();
-
-			var Masters = new Carousel('#section-11', '#advertising-', '#advertisingBar-', true, '#advertisingBrandData-', '#advertisingBriefData-', '#advertisingClientData-');
-			Masters.init();
-
-			var Lucky = new Carousel('#section-13', '#webLucky-', '#webLuckyBar-');
+			var Lucky = new Carousel('#section-6', '#lucky-', '#luckyBar-');
 			Lucky.init();
 
-			var Camila = new Carousel('#section-14', '#camilaWeb-', '#camilaWebBar-');
-			Camila.init();
+			var DasLab = new Carousel('#section-7', '#daslab-', '#daslabBar-');
+			DasLab.init();
+
+			var Voxel = new Carousel('#section-8', '#voxel-', '#voxelBar-');
+			Voxel.init();
 		// END Set and Initialize all carousels
 
 		// SWIPE DETECTION
@@ -97,28 +91,20 @@
 						Milie.next();
 						break;
 
-					case 8:
-						Uniforms.next();
+					case 5:
+						Wellcome.next();
 						break;
 
-					case 9:
-						POS.next();
-						break;
-
-					case 10:
-						Interiorism.next();
-						break;
-
-					case 11:
-						Masters.next();
-						break;
-
-					case 13:
+					case 6:
 						Lucky.next();
 						break;
 
-					case 14:
-						Camila.next();
+					case 7:
+						DasLab.next();
+						break;
+
+					case 8:
+						Voxel.next();
 						break;
 				}
 			}
@@ -138,28 +124,20 @@
 						Milie.prev();
 						break;
 
-					case 8:
-						Uniforms.prev();
+					case 5:
+						Wellcome.prev();
 						break;
 
-					case 9:
-						POS.prev();
-						break;
-
-					case 10:
-						Interiorism.prev();
-						break;
-
-					case 11:
-						Masters.prev();
-						break;
-
-					case 13:
+					case 6:
 						Lucky.prev();
 						break;
 
-					case 14:
-						Camila.prev();
+					case 7:
+						DasLab.prev();
+						break;
+
+					case 8:
+						Voxel.prev();
 						break;
 				}
 			}
@@ -179,34 +157,23 @@
 						Milie.goTo(index);
 						break;
 
-					case 8:
-						Uniforms.goTo(index);
+					case 5:
+						Wellcome.goTo(index);
 						break;
 
-					case 9:
-						POS.goTo(index);
-						break;
-
-					case 10:
-						Interiorism.goTo(index);
-						break;
-
-					case 11:
-						Masters.goTo(index);
-						break;
-
-					case 13:
+					case 6:
 						Lucky.goTo(index);
 						break;
 
-					case 14:
-						Camila.goTo(index);
+					case 7:
+						DasLab.goTo(index);
+						break;
+
+					case 8:
+						Voxel.goTo(index);
 						break;
 				}
 			}
-
-			
-
 	});
 	
 

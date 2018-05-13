@@ -40,20 +40,61 @@
     </head>
     <body>
         <div id="fullWrapper">
+            <div id="mbrtLoader">
+                <div class="centeredWrapper">
+                    <div class="innerLoaderBoxes quotesBox smoothIntro">
+                        <p id="loadingQuote" class="active"></p>
+                    </div>
+
+                    <div class="innerLoaderBoxes loadingBox smoothIntro">
+                        <h1>Loading<span id="loadingDots"></span></h1>
+                    </div>
+
+                    <div class="innerLoaderBoxes instructionsBox">
+                        <div class="icons">
+                            <div class="mouse smoothIntro">
+                                <i class="sprite sprite-mouse sliderControl active"></i>
+                            </div>
+
+                            <div class="arrowKeys smoothIntro">
+                                <div class="keys upKey">
+                                    <i class="sprite sprite-upKey sliderControl active"></i>
+                                </div>
+                                <div class="keys downKey">
+                                    <i class="sprite sprite-downKey sliderControl active"></i>
+                                </div>
+                                <div class="keys leftKey">
+                                    <i class="sprite sprite-leftKey carouselControl"></i>
+                                </div>
+                                <div class="keys rightKey">
+                                    <i class="sprite sprite-rightKey carouselControl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description smoothIntro">
+                            <p id="loadingDescription" class="active">
+                                Scroll / Keyboard UP & DOWN to change of section.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
             <div id="mbrtWrapper">
-                <!-- <div class="testSquare"></div> -->
+                <div class="testSquare"></div>
 
                 <!-- LEFT LOGO NAV -->
-                <nav id="topMainNav" class="animatableMainNav">
-                    <figure id="topLeftLogo">
+                <nav id="topMainNav">
+                    <figure id="topLeftLogo" class="animatableMainNav">
                         <img src="/img/brand/top_logo.png" alt="Mandelbrot">
                     </figure>
 
                     <ul class="topRightNav">
-                        <li class="mainNavButtons"><a href="#">Work</a></li>
-                        <li class="mainNavButtons"><a href="#">Skills</a></li>
-                        <li class="mainNavButtons"><a href="#">About</a></li>
-                        <li class="mainNavButtons"><a href="#">Hire Us</a></li>
+                        <li class="mainNavButtons animatableMainNav"><a href="#">Work</a></li>
+                        <li class="mainNavButtons animatableMainNav"><a href="#">Skills</a></li>
+                        <li class="mainNavButtons animatableMainNav"><a href="#">About</a></li>
+                        <li class="mainNavButtons animatableMainNav"><a href="#">Hire Us</a></li>
                     </ul>
                 </nav>
 
@@ -292,7 +333,7 @@
                                             <p>Ryan Hicks</p>
 
                                             <h5>Brief</h5>
-                                            <p>Brand Strategy & Identity Design</p>
+                                            <p>Identity, Web Design & Development</p>
 
                                             <h5>Client</h5>
                                             <p>Ryan Hicks | Franchising Public Figure</p>
@@ -312,7 +353,7 @@
                                             <p>Ryan Hicks</p>
 
                                             <h5>Brief</h5>
-                                            <p>Brand Strategy & Identity Design</p>
+                                            <p>Identity, Web Design & Development</p>
 
                                             <h5>Client</h5>
                                             <p>Ryan Hicks | Franchising Public Figure</p>
@@ -769,13 +810,13 @@
                 <footer id="rrssFooter">
                     <ul class="rrssList">
                         <li class="rrssIcon">
-                            <a href="#"><i class="rrssLogo iFb"></i></a>
+                            <a href="#"><i class="animatableMainNav rrssLogo iFb"></i></a>
                         </li>
                         <li class="rrssIcon">
-                            <a href="#"><i class="rrssLogo iIg"></i></a>
+                            <a href="#"><i class="animatableMainNav rrssLogo iIg"></i></a>
                         </li>
                         <li class="rrssIcon">
-                            <a href="#"><i class="rrssLogo iMail"></i></a>
+                            <a href="#"><i class="animatableMainNav rrssLogo iMail"></i></a>
                         </li>
                     </ul>
                 </footer>

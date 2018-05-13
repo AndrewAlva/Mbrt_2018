@@ -88,6 +88,14 @@
 	        transition: max-width $timing cubic-bezier(.65,0,.25,1);
 }
 
+@mixin bounce_trans($timing){
+	-webkit-transition: all $timing cubic-bezier(.44,.01,.47,1.16);
+	   -moz-transition: all $timing cubic-bezier(.44,.01,.47,1.16);
+	    -ms-transition: all $timing cubic-bezier(.44,.01,.47,1.16);
+	     -o-transition: all $timing cubic-bezier(.44,.01,.47,1.16);
+	        transition: all $timing cubic-bezier(.44,.01,.47,1.16);
+}
+
 @mixin opacity($val){
 	opacity: $val;
 	filter: alpha(opacity=($val * 100));

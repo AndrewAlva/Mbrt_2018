@@ -39,6 +39,9 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 	this.init = function(){
 		// Init the array of projects images to slide
 		this.projects = $(this.sectionID).find('.projectPhoto');
+
+		// Count and display the total of slides in this project
+		this.countSlides();
 	};
 
 	// Go prev project, only if there is a prev project to go
@@ -101,6 +104,9 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 
 			// Make a tiny pause (100ms) until the new project is in position
 			setTimeout((function(){
+				// Hide the slider counter until the new slide is in position
+				$(this.sectionID).find('.currentSlide').addClass('crystalMainNav');
+
 				// Move the new project into the wrapper
 				$(this.projectsPrefix + index).removeClass(newProjectMove);
 
@@ -128,6 +134,9 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 	// Update 'active project var' according to goTo(this_slide) function result
 	this.setStates = function(index){
 		this.activeProject = index;
+
+		// Update the current slide counter of the project
+		this.updateCurrentSlide();
 	};
 
 	// Animate the pagination nav bars according to the new showing project. Functionality very similar as goTo() method
@@ -184,5 +193,27 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 		// Right now there is only one type of brief, so we will only disappear and appear the same object
 		$(this.projectsBriefPrefix + '0').addClass('active'); 
 	};
+
+	// Define the number of slides of each project
+	this.countSlides = function(){
+		var totalSlides = this.projects.length;
+		$(this.sectionID).find('.totalSlides').text(twoDigitsFormat(totalSlides));
+	};
+
+	// Show user in which slide he is
+	this.updateCurrentSlide = function(){
+		$(this.sectionID).find('.currentSlide').text(twoDigitsFormat(this.activeProject + 1));
+
+		// Show the DOM element to user
+		$(this.sectionID).find('.currentSlide').removeClass('crystalMainNav');
+	};
 }
 
+// Format numbers to always display 2 digits, using '0' if necessary
+function twoDigitsFormat(numberToFormat){
+	if(numberToFormat < 10) {
+		numberToFormat = "0" + numberToFormat;
+	}
+
+	return numberToFormat;
+}

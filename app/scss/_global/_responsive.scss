@@ -2,9 +2,6 @@
 @media screen and (max-width: 1849px){
 	#fullWrapper{
 		#mbrtWrapper{
-			// Right Bars Navigator
-			#rightBarsNav{
-			}
 
 			// Contact Section
 			.contactSection{
@@ -428,10 +425,7 @@
 @media screen and (max-width: 1649px){
 	#fullWrapper{
 		#mbrtWrapper{
-			// Right Bars Navigator
-			#rightBarsNav{
-			}
-
+			
 			// Vertical Carousel Section
 			.carouselVertSection{
 				.innerCarousel{
@@ -1396,6 +1390,13 @@
 	}
 
 	#fullWrapper {
+		#mbrtLoader{
+			.centeredWrapper{
+				width: 80%;
+				line-height: 20px;
+			}
+		}
+
 		#mbrtWrapper {
 			.introSection{
 				.introLetter{
@@ -1410,6 +1411,7 @@
 			#section-0{
 				#mainLogo{
 					width: 450px;
+					height: 261px;
 					left: 160px;
 				}
 			}
@@ -1444,6 +1446,49 @@
 // Mobile styling
 @media screen and (max-width: 767.98px){
 	#fullWrapper {
+		#mbrtLoader{
+			.centeredWrapper{
+				width: 60%;
+				height: 290px;
+
+				.quotesBox{
+					height: 55px;
+
+					p{
+						height: unset;
+						line-height: 18px;
+						font-size: 14px;
+					}
+				}
+
+				.loadingBox{
+					height: 100px;
+
+					h1{
+						display: table;
+						height: unset;
+						font-size: 26px;
+					}
+				}
+
+				.instructionsBox{
+					.icons{
+						height: 80px;
+						margin-top: 0;
+					}
+
+					.description{
+						margin-top: 20px;
+
+						p{
+							font-size: 14px;
+							line-height: 18px;
+						}
+					}
+				}
+			}
+		}
+
 		#mbrtWrapper{
 			#topMainNav{
 				height: 50px;
@@ -1466,6 +1511,7 @@
 				.barsWrapper{
 					.navBar{
 						@include translate(7px, 0);
+						padding: 4px 0;
 
 						.navNumber, .navName{
 							display: none;
@@ -1522,7 +1568,7 @@
 							z-index: 1;
 							width: 40px;
 							height: 40px;
-							top: unset;
+							top: auto;
 							bottom: 5%;
 						}
 
@@ -1557,6 +1603,31 @@
 							top: -15px;
 							right: 0;
 						}
+					}
+				}
+			}
+
+			#section-0{
+				#mainLogo{
+					width: 260px;
+					height: 151px;
+					left: 92px;
+				}
+
+				#startExploring{
+					width: 40px;
+					height: 60px;
+
+					.startText{
+						height: unset;
+						font-size: 9pt;
+						line-height: unset;
+						letter-spacing: 1px;
+						margin-bottom: 7px;
+					}
+
+					.startGo{
+						height: 30px;
 					}
 				}
 			}
@@ -1606,5 +1677,12 @@
 				}
 			}
 		}
+	}
+
+	.sprite-downArrow{
+		width: 30px;
+		height: 30px;
+		background-position: -5px -37px;
+		background-size: 157px;
 	}
 }

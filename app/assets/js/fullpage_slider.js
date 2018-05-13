@@ -240,7 +240,8 @@
 		next: function(){
 			var index = Slider.sectionActive + 1;
 			if (index >= Slider.screens.length) {
-				console.log('You have reached the bottom of the slider.');
+				// console.log('You have reached the bottom of the slider.');
+				Slider.goTo(2);
 			} else {
 				Slider.goTo(index);
 			};

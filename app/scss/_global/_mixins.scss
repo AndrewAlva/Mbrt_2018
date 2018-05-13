@@ -104,34 +104,39 @@
 }
 
 @mixin writingBar(){
-	border-right: 4px solid rgba(151,151,155,1);
+	border-right: 2px solid rgba(151,151,155,1);
 	-webkit-animation: writingBar 0.8s ease infinite alternate;
 	   -moz-animation: writingBar 0.8s ease infinite alternate;
 	    -ms-animation: writingBar 0.8s ease infinite alternate;
 	     -o-animation: writingBar 0.8s ease infinite alternate;
 	        animation: writingBar 0.8s ease infinite alternate;
+
+    @media screen and (max-width: 1023px){
+    	border-right: 1px solid rgba(151,151,155,1);
+    }
 }
 
 @-webkit-keyframes writingBar {
-	0% { border-right: 4px solid rgba(151,151,155,1); }
-	100% { border-right: 4px solid rgba(151,151,155,0); }
+	0% { border-color: rgba(151,151,155,1); }
+	100% { border-color: rgba(151,151,155,0); }
 }
 @-moz-keyframes writingBar {
-	0% { border-right: 4px solid rgba(151,151,155,1); }
-	100% { border-right: 4px solid rgba(151,151,155,0); }
+	0% { border-color: rgba(151,151,155,1); }
+	100% { border-color: rgba(151,151,155,0); }
 }
 @-ms-keyframes writingBar {
-	0% { border-right: 4px solid rgba(151,151,155,1); }
-	100% { border-right: 4px solid rgba(151,151,155,0); }
+	0% { border-color: rgba(151,151,155,1); }
+	100% { border-color: rgba(151,151,155,0); }
 }
 @-o-keyframes writingBar {
-	0% { border-right: 4px solid rgba(151,151,155,1); }
-	100% { border-right: 4px solid rgba(151,151,155,0); }
+	0% { border-color: rgba(151,151,155,1); }
+	100% { border-color: rgba(151,151,155,0); }
 }
 @keyframes writingBar {
-	0% { border-right: 4px solid rgba(151,151,155,1); }
-	100% { border-right: 4px solid rgba(151,151,155,0); }
+	0% { border-color: rgba(151,151,155,1); }
+	100% { border-color: rgba(151,151,155,0); }
 }
+
 
 @mixin blackHover(){
 	position: absolute;

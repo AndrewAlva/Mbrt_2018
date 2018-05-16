@@ -1,0 +1,22 @@
+.button{
+	height: 50px;
+	text-decoration: none;
+	display: table;
+	border-top: 1px solid #afafaf;
+}
+
+	.button__caption{
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		color: #000;
+		font-size: 14px;
+	}
+
+	.button__arrow{
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 20px;
+		padding-right: 12px;
+	}

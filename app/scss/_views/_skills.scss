@@ -1,0 +1,6 @@
+#skillsWrapper{
+	position: absolute;
+	width: 100%;
+	padding-top: 160px;
+	@include boxSizeFit();
+}

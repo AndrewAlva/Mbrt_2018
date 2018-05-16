@@ -3,10 +3,16 @@
 @import '_global/vars.scss';
 @import '_global/effects.scss';
 @import '_global/sprites.scss';
+@import '_global/grid.scss';
 
 @import '_global/head-nav.scss';
 
+@import '_bem/demititle.scss';
+@import '_bem/hero-text.scss';
+@import '_bem/buttons.scss';
+
 @import '_views/home.scss';
+@import '_views/skills.scss';
 
 *{
 	margin: 0;

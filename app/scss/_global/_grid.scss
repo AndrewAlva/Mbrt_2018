@@ -1,0 +1,13 @@
+.grid{
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+	@include boxSizeFit();
+	padding: 0 15px;
+}
+
+.grid__text-block{
+	width: 970px;
+	margin: 0 auto;
+	margin-bottom: 90px;
+}

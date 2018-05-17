@@ -1,6 +1,14 @@
 #skillsWrapper{
 	position: absolute;
 	width: 100%;
+	height: 100%;
+	overflow: scroll;
 	padding-top: 160px;
 	@include boxSizeFit();
+}
+
+#skill-text-01{
+	margin-top: 180px;
+}#skill-text-02{
+	margin-top: 70px;
 }

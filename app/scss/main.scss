@@ -7,9 +7,12 @@
 
 @import '_global/head-nav.scss';
 
+@import '_bem/title.scss';
 @import '_bem/demititle.scss';
 @import '_bem/hero-text.scss';
+@import '_bem/article-text.scss';
 @import '_bem/buttons.scss';
+@import '_bem/image-helpers.scss';
 
 @import '_views/home.scss';
 @import '_views/skills.scss';

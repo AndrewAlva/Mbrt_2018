@@ -6,8 +6,16 @@
 	padding: 0 15px;
 }
 
-.grid__text-block{
-	width: 970px;
-	margin: 0 auto;
-	margin-bottom: 90px;
-}
+	.grid__text-block{
+		position: relative;
+		width: 970px;
+		margin: 0 auto;
+		margin-bottom: 90px;
+	}
+
+	.grid__row{
+		position: relative;
+		overflow: auto;
+		width: 100%;
+		margin-bottom: 100px;
+	}

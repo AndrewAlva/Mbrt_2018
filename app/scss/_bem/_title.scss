@@ -1,0 +1,11 @@
+.title{
+	position: relative;
+	display: block;
+	margin-bottom: 20px;
+}
+
+	.title__caption{
+		@include regularFont();
+		font-size: 40px;
+		color: #000;
+	}

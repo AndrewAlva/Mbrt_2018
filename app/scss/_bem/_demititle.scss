@@ -1,6 +1,6 @@
 .demititle{
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	text-transform: uppercase;
 }
 
@@ -20,7 +20,6 @@
 		font-size: 14px;
 		color: #000;
 	}
-
-		.demititle__caption--gray{
-			@include opacity(0.3);
-		}
+	.demititle__caption--gray{
+		@include opacity(0.3);
+	}

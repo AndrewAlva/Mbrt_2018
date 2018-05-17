@@ -1,0 +1,29 @@
+.article-text{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 425px;
+}
+.article-text--right{
+	margin-left: 100px;
+}
+.article-text--left{
+	margin-left: 85px;
+}
+
+	.article-text__title{
+		position: relative;
+		margin-bottom: 30px;
+		font-size: 32px;
+		line-height: 1.2em;
+		color: #000;
+	}
+
+	.article-text__paragraph{
+		position: relative;
+		margin-bottom: 34px;
+		@include lightFont();
+		font-size: 16px;
+		line-height: 1.2em;
+		color: #000;
+	}

@@ -1479,21 +1479,6 @@
 		}
 
 		#mbrtWrapper{
-			#topMainNav{
-				height: 50px;
-				padding: 0 20px;
-				font-size: 80%;
-
-				.topRightNav{
-					height: 20px;
-					right: 20px;
-
-					.mainNavButtons{
-						margin-left: 10px;
-					}
-				}
-			}
-
 			#rightBarsNav{
 				width: 40px;
 
@@ -1664,6 +1649,21 @@
 						margin-left: 10px;
 					}
 				}
+			}
+		}
+	}
+
+	#topMainNav{
+		height: 50px;
+		padding: 0 20px;
+		font-size: 80%;
+
+		.topRightNav{
+			height: 20px;
+			right: 20px;
+
+			.mainNavButtons{
+				margin-left: 10px;
 			}
 		}
 	}

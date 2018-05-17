@@ -1,56 +1,52 @@
-#fullWrapper{
-	#mbrtWrapper{
-		#topMainNav{
-			position: fixed;
+#topMainNav{
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	@include boxSizeFit();
+	padding: 0 80px;
+	z-index: 1000000;
+
+	#topLeftLogo{
+		position: absolute;
+		width: 66px;
+		height: 21px;
+		bottom: 5px;
+		cursor: pointer;
+		@include transitions(0.4s);
+
+		img{
+			position: absolute;
 			width: 100%;
-			height: 75px;
-			@include boxSizeFit();
-			padding: 0 80px;
-			z-index: 1000000;
+		}
+	}
 
-			#topLeftLogo{
-				position: absolute;
-				width: 66px;
-				height: 21px;
-				bottom: 5px;
-				cursor: pointer;
-				@include transitions(0.4s);
+	.topRightNav{
+		position: absolute;
+		display: block;
+		height: 25px;
+		right: 80px;
+		bottom: 0;
+		list-style: none;
 
-				img{
-					position: absolute;
-					width: 100%;
-				}
+		.mainNavButtons{
+			position: relative;
+			display: inline-block;
+			text-transform: uppercase;
+			top: -2px;
+			margin-left: 40px;
+			font-size: 0.9em;
+
+			&:nth-child(1){
+				margin-left: 0;
 			}
 
-			.topRightNav{
-				position: absolute;
-				display: block;
-				height: 25px;
-				right: 80px;
-				bottom: 0;
-				list-style: none;
+			a{
+				text-decoration: none;
+				color: $nav-light-gray-active;
+				@include transitions(0.4s);
 
-				.mainNavButtons{
-					position: relative;
-					display: inline-block;
-					text-transform: uppercase;
-					top: -2px;
-					margin-left: 40px;
-					font-size: 0.9em;
-
-					&:nth-child(1){
-						margin-left: 0;
-					}
-
-					a{
-						text-decoration: none;
-						color: $nav-light-gray-active;
-						@include transitions(0.4s);
-
-						&:hover{
-							color: black;
-						}
-					}
+				&:hover{
+					color: black;
 				}
 			}
 		}

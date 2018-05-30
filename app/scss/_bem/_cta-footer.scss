@@ -1,15 +1,17 @@
 .cta-footer{
 	position: relative;
+	overflow: auto;
 	width: 100%;
+	padding: 100px 0 75px 0;
 	text-align: center;
-	margin: 0 auto;
-	width: 280px;
-	padding: 75px 0 25px 0;
+	background-color: $lightest-gray;
 
 	&__copy{
+		padding-bottom: 25px;
+		margin: 0 auto;
+		width: 280px;
 		font-size: 32px;
 		line-height: 1.1em;
 		color: $black;
-		margin-bottom: 25px;
 	}
 }

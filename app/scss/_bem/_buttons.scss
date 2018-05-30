@@ -17,8 +17,36 @@
 		position: relative;
 		display: table-cell;
 		vertical-align: middle;
-		padding-left: 20px;
+		padding-left: 18px;
 		padding-right: 12px;
+		width: 31px;
+
+		&:before{
+			content: "";
+			display: inline-block;
+			float: left;
+			position: relative;
+			width: 100%;
+			height: 1px;
+			background-color: $lm-gray;
+
+		}
+
+		&:after{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			margin-top: -3px;
+			margin-left: -7px;
+			border-bottom: 1px solid $lm-gray;
+			border-right: 1px solid $lm-gray;
+
+			@include origin(center, center);
+			@include rotate(-45deg);
+
+		}
 	}
 }
 
@@ -29,26 +57,32 @@
 	overflow: auto;
 	display: table;
 
+	&--right{
+		float: right;
+	}
+
 	&__caption{
 		color: $black;
 		display: inline-block;
 		float: left;
 		display: table-cell;
 		vertical-align: middle;
+		padding: 0 13px;
 	}
 
 	&__arrow{
 		display: table-cell;
 		vertical-align: middle;
+		width: 38px;
 
 		&:before{
 			content: "";
 			display: inline-block;
 			float: left;
 			position: relative;
-			width: 38px;
+			width: 100%;
 			height: 1px;
-			background-color: $arrow-gray;
+			background-color: $lm-gray;
 
 		}
 
@@ -68,8 +102,8 @@
 
 			&:after{
 				margin-left: -38px;
-				border-top: 1px solid $arrow-gray;
-				border-left: 1px solid $arrow-gray;
+				border-top: 1px solid $lm-gray;
+				border-left: 1px solid $lm-gray;
 			}
 		}
 		&--right{
@@ -77,9 +111,25 @@
 
 			&:after{
 				margin-left: -9px;
-				border-bottom: 1px solid $arrow-gray;
-				border-right: 1px solid $arrow-gray;
+				border-bottom: 1px solid $lm-gray;
+				border-right: 1px solid $lm-gray;
 			}
 		}
+	}
+}
+
+.discrete-link{
+	display: inline-block;
+	text-decoration: none;
+	color: $lm-gray;
+	font-size: 16px;
+
+	&:after{
+		content: "";
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: $lm-gray;
 	}
 }

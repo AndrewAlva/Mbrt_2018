@@ -28,5 +28,17 @@
 			}
 		}
 	}
+	
+	&__row-6col{
+		position: relative;
+		overflow: auto;
+		width: 570px;
+		margin: 0 auto;
+	}
 
+
+	&__col-3{
+		position: relative;
+		width: 33.33%;
+	}
 }

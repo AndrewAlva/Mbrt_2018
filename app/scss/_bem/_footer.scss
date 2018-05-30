@@ -1,0 +1,81 @@
+.footer{
+	position: relative;
+	width: 100%;
+
+	&__row{
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+		-webkit-justify-content: space-between;
+		-moz-justify-content: space-between;
+		justify-content: space-between;
+
+		@include boxSizeFit();
+		padding: 0 20px;
+	}
+
+	&__subtitles{
+		font-size: 14px;
+		color: $black;
+		@include regularFont();
+		margin-bottom: 25px;
+	}
+
+	&__list-wrapper{
+		list-style: none;
+		text-align: left;
+	}
+
+	&__list-bullet{
+		font-size: 14px;
+		line-height: 1.4em;
+		color: $lm-gray;
+
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+
+
+	&__legals{
+		text-align: center;
+		font-size: 12px;
+		color: $lm-gray;
+		padding-top: 75px;
+		padding-bottom: 40px;
+		@include lightFont();
+	}
+
+
+
+	&__scroll-cta{
+		position: absolute;
+		height: 100%;
+		top: 0;
+		right: 80px;
+		writing-mode: vertical-lr;
+		@include rotate(180deg);
+		text-align: center;
+
+		&__label{
+			text-decoration: none;
+			font-size: 12px;
+			color: $black;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

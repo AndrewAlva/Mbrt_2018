@@ -3,9 +3,8 @@
 	text-decoration: none;
 	display: table;
 	border-top: 1px solid #afafaf;
-}
 
-	.button__caption{
+	&__caption{
 		position: relative;
 		display: table-cell;
 		vertical-align: middle;
@@ -14,10 +13,73 @@
 		@include regularFont();
 	}
 
-	.button__arrow{
+	&__arrow{
 		position: relative;
 		display: table-cell;
 		vertical-align: middle;
 		padding-left: 20px;
 		padding-right: 12px;
 	}
+}
+
+	
+
+.simple-link{
+	text-decoration: none;
+	overflow: auto;
+	display: table;
+
+	&__caption{
+		color: $black;
+		display: inline-block;
+		float: left;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__arrow{
+		display: table-cell;
+		vertical-align: middle;
+
+		&:before{
+			content: "";
+			display: inline-block;
+			float: left;
+			position: relative;
+			width: 38px;
+			height: 1px;
+			background-color: $arrow-gray;
+
+		}
+
+		&:after{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			margin-top: -4px;
+			@include origin(center, center);
+			@include rotate(-45deg);
+		}
+
+		&--left{
+			padding-left: 15px;
+
+			&:after{
+				margin-left: -38px;
+				border-top: 1px solid $arrow-gray;
+				border-left: 1px solid $arrow-gray;
+			}
+		}
+		&--right{
+			padding-right: 15px;
+
+			&:after{
+				margin-left: -9px;
+				border-bottom: 1px solid $arrow-gray;
+				border-right: 1px solid $arrow-gray;
+			}
+		}
+	}
+}

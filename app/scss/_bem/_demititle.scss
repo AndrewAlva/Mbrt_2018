@@ -2,9 +2,8 @@
 	position: relative;
 	margin-bottom: 5px;
 	text-transform: uppercase;
-}
 
-	.demititle__line{
+	&__line{
 		position: relative;
 		display: inline-block;
 		width: 50px;
@@ -14,12 +13,15 @@
 		background-color: #afafaf;
 	}
 
-	.demititle__caption{
+	&__caption{
 		position: relative;
 		display: inline-block;
 		font-size: 14px;
 		color: #000;
 	}
-	.demititle__caption--gray{
+	&__caption--gray{
 		@include opacity(0.3);
 	}
+}
+
+	

@@ -3,15 +3,23 @@
 	display: inline-block;
 	float: left;
 	width: 425px;
-}
-.article-text--right{
-	margin-left: 100px;
-}
-.article-text--left{
-	margin-left: 85px;
-}
 
-	.article-text__title{
+	&--small{
+		width: 370px;
+
+		&--right{
+			margin-left: 60px;
+		}
+	}
+
+	&--right{
+		margin-left: 100px;
+	}
+	&--left{
+		margin-left: 85px;
+	}
+
+	&__title{
 		position: relative;
 		margin-bottom: 30px;
 		font-size: 32px;
@@ -19,7 +27,7 @@
 		color: #000;
 	}
 
-	.article-text__paragraph{
+	&__paragraph{
 		position: relative;
 		margin-bottom: 34px;
 		@include lightFont();
@@ -27,3 +35,5 @@
 		line-height: 1.2em;
 		color: #000;
 	}
+}
+

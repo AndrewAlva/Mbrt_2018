@@ -57,6 +57,10 @@
 	overflow: auto;
 	display: table;
 
+	&--center{
+		margin: 0 auto;
+	}
+
 	&--right{
 		float: right;
 	}

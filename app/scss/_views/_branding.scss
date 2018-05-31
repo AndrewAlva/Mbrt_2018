@@ -1,0 +1,12 @@
+#brandingWrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	padding-top: 115px;
+	@include boxSizeFit();
+}
+
+#brandingBody{
+	margin-bottom: 0;
+}

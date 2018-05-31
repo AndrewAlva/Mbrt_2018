@@ -18,6 +18,7 @@
 
 @import '_views/home.scss';
 @import '_views/skills.scss';
+@import '_views/branding.scss';
 
 *{
 	margin: 0;
@@ -31,6 +32,16 @@ h1{
 
 h2, p{
 	@include regularFont();
+}
+
+#test{
+	z-index: 1000000000000;
+	position: absolute;
+	background-color: red;
+	opacity: 0.3;
+	width: 288px;
+	height: 63px;
+	right: 100px;
 }
 
 

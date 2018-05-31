@@ -21,7 +21,7 @@
 
 	&__title{
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 32px;
 		font-size: 32px;
 		line-height: 1.2em;
 		color: #000;
@@ -29,7 +29,7 @@
 
 	&__paragraph{
 		position: relative;
-		margin-bottom: 34px;
+		margin-bottom: 36px;
 		@include lightFont();
 		font-size: 16px;
 		line-height: 1.2em;

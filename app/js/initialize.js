@@ -4,4 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Get skills section js
   require('./skills');
+
+  // Get form interactions js
+  require('./form');
 });

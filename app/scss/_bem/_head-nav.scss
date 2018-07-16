@@ -34,7 +34,8 @@
 			text-transform: uppercase;
 			top: -2px;
 			margin-left: 40px;
-			font-size: 0.9em;
+			// font-size: 0.9em;
+			font-size: 14px;
 
 			&:nth-child(1){
 				margin-left: 0;
@@ -43,11 +44,6 @@
 			a{
 				text-decoration: none;
 				color: $nav-light-gray-active;
-				@include transitions(0.4s);
-
-				&:hover{
-					color: black;
-				}
 			}
 		}
 	}

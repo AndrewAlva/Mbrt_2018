@@ -1,90 +1,101 @@
-const noise = () => {
-    let canvas, ctx;
+var canvas, context;
 
-    let wWidth, wHeight;
+var PI2 = Math.PI*2;
 
-    let noiseData = [];
-    let frame = 0;
+var maxWidth = window.innerWidth,   
+     maxHeight = window.innerHeight;
 
-    let loopTimeout;
+var halfWidth = maxWidth /2,
+     halfHeight = maxHeight / 2;
 
-
-    // Create Noise
-    const createNoise = () => {
-        const idata = ctx.createImageData(wWidth, wHeight);
-        const buffer32 = new Uint32Array(idata.data.buffer);
-        const len = buffer32.length;
-
-        for (let i = 0; i < len; i++) {
-            if(Math.random() < 0.25) {
-				buffer32[i] = 0x09000000; /* Set biggest dots of noise gray */
-				
-			}
-        }
-
-        noiseData.push(idata);
-    };
-
-
-    // Play Noise
-    const paintNoise = () => {
-        if (frame === 5) {
-            frame = 0;
-        } else {
-            frame++;
-        }
-
-        ctx.putImageData(noiseData[frame], 0, 0);
-    };
-
-
-    // Loop
-    const loop = () => {
-        paintNoise(frame);
-
-        loopTimeout = window.setTimeout(() => {
-            window.requestAnimationFrame(loop);
-        }, (1000 / 60));
-    };
-
-
-    // Setup
-    const setup = () => {
-        wWidth = window.innerWidth;
-        wHeight = window.innerHeight;
-
-        canvas.width = wWidth;
-        canvas.height = wHeight;
-
-        for (let i = 0; i < 10; i++) {
-            createNoise();
-        }
-		 
-        loop();
-    };
-
-
-    // Reset
-    let resizeThrottle;
-    const reset = () => {
-        window.addEventListener('resize', () => {
-            window.clearTimeout(resizeThrottle);
-
-            resizeThrottle = window.setTimeout(() => {
-                window.clearTimeout(loopTimeout);
-                setup();
-            }, 200);
-        }, false);
-    };
-
-
-    // Init
-    const init = (() => {
-        canvas = document.getElementById('noise-canvas');
-        ctx = canvas.getContext('2d');
-
-        setup();
-    })();
+var mouse = {
+    x: halfWidth,
+    y: halfHeight
 };
 
-noise();
+var point = {
+    x: mouse.x,
+    y: mouse.y,
+    cof: 0.1,
+    radius: 2,
+    width: 4,
+    color: "black",
+    alpha: 1,
+    hover: false,
+    update: function() {
+        this.x += (mouse.x - this.x) * this.cof;
+        this.y += (mouse.y - this.y) * this.cof;
+        this.draw();
+    },
+    draw: function() {
+        context.beginPath();
+        context.globalAlpha= this.alpha;
+        context.fillStyle= this.color;
+        context.lineWidth= this.width;
+        context.font = "14px Suisse-Light";
+        context.fillText("ABOUT", 702, 64);
+        context.arc(this.x, this.y, this.radius, 0, PI2, false);
+        context.stroke();
+        context.closePath();
+    },
+    shrink: function(){
+        TweenLite.to(this, 0.15, {
+            ease: Power1.easeOut,
+            radius: 2,
+            width: 4,
+            alpha: 1
+        });
+        point.hover = true;
+    },
+    grow: function(){
+        TweenLite.to(this, 0.15, {
+            ease: Power1.easeOut,
+            radius: 50,
+            width: 1,
+            alpha: 0.5
+        });
+        point.hover = false;
+    }
+};
+
+function init() {
+    canvas = document.getElementById('noise-canvas');
+    context = canvas.getContext('2d');
+    window.addEventListener("resize", function() {
+        onResizeWindow();
+    }, false);
+
+    document.body.addEventListener("click", function(event) {
+        // 
+    });
+    $('a').hover(function(){point.grow()}, function(){point.shrink()});
+    window.addEventListener("mousemove", function(event) {
+        mouse = {
+            x: event.clientX,
+            y: event.clientY
+        };
+    });
+    onResizeWindow();
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
+
+function render() {
+    context.clearRect(0, 0, maxWidth, maxHeight);
+    point.update();
+}
+
+
+function onResizeWindow() {
+    maxWidth = window.innerWidth;
+    maxHeight = window.innerHeight;
+    halfWidth = maxWidth /2;
+    halfHeight = maxHeight / 2;
+    canvas.width = maxWidth;
+    canvas.height = maxHeight;
+}
+init();
+animate();

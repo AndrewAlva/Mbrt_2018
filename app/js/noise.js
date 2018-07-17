@@ -1,4 +1,5 @@
-var canvas, context, buffer, buffer_ctx;
+var canvas, context, maskedCanvas, maskedContext;
+var nav1, nav2, nav3, nav4;
 
 var PI2 = Math.PI*2;
 
@@ -17,7 +18,7 @@ var Point = {
     x: mouse.x,
     y: mouse.y,
     cof: 0.15,
-    radius: 200,
+    radius: 2,
     width: 4,
     color: "rgba(0,0,0,1)",
     alpha: 1,
@@ -41,9 +42,9 @@ var Point = {
         context.stroke();
     },
     shrink: function(){
-        TweenLite.to(this, 1, {
-            ease: Power3.easeOut,
-            radius: 200,
+        TweenLite.to(this, 0.35, {
+            ease: Power4.easeOut,
+            radius: 2,
             width: 4,
             color: "rgba(0,0,0,1)"
         });
@@ -60,19 +61,49 @@ var Point = {
     }
 };
 
-var Text = {
-    el: document.getElementById("masked-title"),
+var Navs = {
+    array: [
+        nav1 = {
+            id: document.getElementById("work-drawing"),
+            str: "WORK",
+            x: 0,
+            y: 0
+        },
+        nav2 = {
+            id: document.getElementById("skills-drawing"),
+            str: "SKILLS",
+            x: 0,
+            y: 0
+        },
+        nav3 = {
+            id: document.getElementById("about-drawing"),
+            str: "ABOUT",
+            x: 0,
+            y: 0
+        },
+        nav4 = {
+            id: document.getElementById("hire-drawing"),
+            str: "HIRE US",
+            x: 0,
+            y: 0
+        }
+        // nav5 = {},
+        // nav6 = {},
+        // nav7 = {}
+    ],
+
     fontSize: 14,
     fontFamily: "'Suisse-Light', Sans-Serif",
-    str: "WORK",
-    x: 100,
-    y: 100,
     lineHeight: 1.2,
     fillStyle: "black",
+    getPosition: function(){
+        this.array.forEach(function(el) {
+            var _bounding = el.id.getBoundingClientRect();
+            el.x = _bounding.left;
+            el.y = _bounding.top;
+        });
+    },
     update: function() {
-        var _bounding = this.el.getBoundingClientRect();
-        this.x = _bounding.left;
-        this.y = _bounding.top;
         this.draw();
     },
     draw: function() {
@@ -83,19 +114,25 @@ var Text = {
     },
     mask: function(){
         Point.fill();
-        context.font = this.fontSize + "px " + this.fontFamily;
-        context.fillStyle = this.fillStyle;
-        context.fillText(this.str, this.x, this.y + (this.fontSize));
-        // context.drawImage(buffer_ctx, 0, 0, canvas.width, canvas.height);
+
+        // maskedContext.fillStyle = "white";
+        // maskedContext.fillRect(0,0, maxWidth, maxHeight);
+        this.array.forEach(function(el) {
+            maskedContext.font = Navs.fontSize + "px " + Navs.fontFamily;
+            maskedContext.fillStyle = Navs.fillStyle;
+            maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSize * 0.965));
+        });
+        context.drawImage(maskedCanvas, 0, 0);
     }
 };
+
+
 
 function init() {
     canvas = document.getElementById('noise-canvas');
     context = canvas.getContext('2d');
-
-    buffer = document.createElement("canvas");
-    buffer_ctx = buffer.getContext("2d");
+    maskedCanvas = document.createElement('canvas');
+    maskedContext = maskedCanvas.getContext('2d');
 
     window.addEventListener("resize", function() {
         onResizeWindow();
@@ -113,6 +150,7 @@ function init() {
             y: event.clientY
         };
     }, false);
+
     onResizeWindow();
 }
 
@@ -123,8 +161,10 @@ function animate() {
 
 function render() {
     context.clearRect(0, 0, maxWidth, maxHeight);
+    maskedContext.clearRect(0, 0, maxWidth, maxHeight);
+
     Point.update();
-    Text.update();
+    Navs.update();
 }
 
 
@@ -133,10 +173,17 @@ function onResizeWindow() {
     maxHeight = window.innerHeight;
     halfWidth = maxWidth /2;
     halfHeight = maxHeight / 2;
+
     canvas.width = maxWidth;
     canvas.height = maxHeight;
-    buffer.width = maxWidth;
-    buffer.height = maxHeight;
+    maskedCanvas.width = maxWidth;
+    maskedCanvas.height = maxHeight;
+
+    Navs.getPosition();
 }
 init();
 animate();
+
+$(window).on("load", function() {
+   onResizeWindow(); 
+});

@@ -1544,6 +1544,7 @@
 							height: 40px;
 							top: auto;
 							bottom: 5%;
+							@include hoverDropShadow();
 						}
 
 						.leftArrow{

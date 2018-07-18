@@ -1,5 +1,5 @@
 var canvas, context, maskedCanvas, maskedContext;
-var nav1, nav2, nav3, nav4;
+// var nav1, nav2, nav3, nav4;
 
 var PI2 = Math.PI*2;
 
@@ -58,41 +58,90 @@ var Point = {
             color: "rgba(0,0,0,0.2)"
         });
         Point.hover = false;
+    },
+    implode: function(){
+        TweenLite.to(this, 0.5, {
+            ease: Power2.easeOut,
+            radius: 0,
+            width: 0,
+            color: "rgba(255,255,255,1)"
+        });
+        Point.hover = true;
     }
 };
 
 var Navs = {
     array: [
-        nav1 = {
+        {
             id: document.getElementById("work-drawing"),
             str: "WORK",
             x: 0,
             y: 0
         },
-        nav2 = {
+        {
             id: document.getElementById("skills-drawing"),
             str: "SKILLS",
             x: 0,
             y: 0
         },
-        nav3 = {
+        {
             id: document.getElementById("about-drawing"),
             str: "ABOUT",
             x: 0,
             y: 0
         },
-        nav4 = {
+        {
             id: document.getElementById("hire-drawing"),
             str: "HIRE US",
             x: 0,
             y: 0
+        },
+        {
+            id: document.getElementById("franpos-drawing"),
+            str: "FRANPOS",
+            x: 0,
+            y: 0
+        },
+        {
+            id: document.getElementById("ryan-drawing"),
+            str: "RYAN HICKS",
+            x: 0,
+            y: 0
+        },
+        {
+            id: document.getElementById("milie-drawing"),
+            str: "MILIE MARIE",
+            x: 0,
+            y: 0
+        },
+        {
+            id: document.getElementById("wellcome-drawing"),
+            str: "WELLCOME",
+            x: 0,
+            y: 0
+        },
+        {
+            id: document.getElementById("lucky-drawing"),
+            str: "LUCKY IDEAS",
+            x: 0,
+            y: 0
+        },
+        {
+            id: document.getElementById("das-drawing"),
+            str: "DAS · LAB",
+            x: 0,
+            y: 0
+        },
+        {
+            id: document.getElementById("voxel-drawing"),
+            str: "VOXEL",
+            x: 0,
+            y: 0
         }
-        // nav5 = {},
-        // nav6 = {},
-        // nav7 = {}
     ],
 
     fontSize: 14,
+    fontSizeSmall: 11,
     fontFamily: "'Suisse-Light', Sans-Serif",
     lineHeight: 1.2,
     fillStyle: "black",
@@ -117,10 +166,19 @@ var Navs = {
 
         // maskedContext.fillStyle = "white";
         // maskedContext.fillRect(0,0, maxWidth, maxHeight);
-        this.array.forEach(function(el) {
-            maskedContext.font = Navs.fontSize + "px " + Navs.fontFamily;
+        this.array.forEach(function(el,i) {
             maskedContext.fillStyle = Navs.fillStyle;
-            maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSize * 0.965));
+
+            if(i < 4){
+                maskedContext.font = Navs.fontSize + "px " + Navs.fontFamily;
+                maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSize * 0.965));
+            } else {
+                maskedContext.font = Navs.fontSizeSmall + "px " + Navs.fontFamily;
+                maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSizeSmall * 0.99));
+
+                maskedContext.fillStyle = "#06111a";
+                maskedContext.fillRect((maxWidth - 14), (el.y + 6), 14, 1);
+            }
         });
         context.drawImage(maskedCanvas, 0, 0);
     }
@@ -142,7 +200,8 @@ function init() {
         // 
     });
 
-    $('a').hover(function(){Point.grow()}, function(){Point.shrink()});
+    $('.mainNavButtons, .navBar, .arrow, .rrssIcon').hover(function(){Point.grow()}, function(){Point.shrink()});
+    $('.visitWebsite').hover(function(){Point.implode()}, function(){Point.shrink()});
     
     window.addEventListener("mousemove", function(event) {
         mouse = {

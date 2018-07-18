@@ -10,25 +10,25 @@
 		Slider.loading();
 
 		// Set and Initialize all carousels
-			var Franpos = new Carousel('#section-2', '#franpos-', '#franposBar-');
+			var Franpos = new Carousel('#section-1', '#franpos-', '#franposBar-');
 			Franpos.init();
 
-			var Ryan = new Carousel('#section-3', '#ryan-', '#ryanBar-');
+			var Ryan = new Carousel('#section-2', '#ryan-', '#ryanBar-');
 			Ryan.init();
 
-			var Milie = new Carousel('#section-4', '#milie-', '#milieBar-');
+			var Milie = new Carousel('#section-3', '#milie-', '#milieBar-');
 			Milie.init();
 
-			var Wellcome = new Carousel('#section-5', '#wellcome-', '#wellcomeBar-');
+			var Wellcome = new Carousel('#section-4', '#wellcome-', '#wellcomeBar-');
 			Wellcome.init();
 
-			var Lucky = new Carousel('#section-6', '#lucky-', '#luckyBar-');
+			var Lucky = new Carousel('#section-5', '#lucky-', '#luckyBar-');
 			Lucky.init();
 
-			var DasLab = new Carousel('#section-7', '#daslab-', '#daslabBar-');
+			var DasLab = new Carousel('#section-6', '#daslab-', '#daslabBar-');
 			DasLab.init();
 
-			var Voxel = new Carousel('#section-8', '#voxel-', '#voxelBar-');
+			var Voxel = new Carousel('#section-7', '#voxel-', '#voxelBar-');
 			Voxel.init();
 		// END Set and Initialize all carousels
 
@@ -79,31 +79,31 @@
 			function carouselNextProject(event){
 				event.preventDefault();
 				switch (Slider.sectionActive){
-					case 2:
+					case 1:
 						Franpos.next();
 						break;
 
-					case 3:
+					case 2:
 						Ryan.next();
 						break;
 
-					case 4:
+					case 3:
 						Milie.next();
 						break;
 
-					case 5:
+					case 4:
 						Wellcome.next();
 						break;
 
-					case 6:
+					case 5:
 						Lucky.next();
 						break;
 
-					case 7:
+					case 6:
 						DasLab.next();
 						break;
 
-					case 8:
+					case 7:
 						Voxel.next();
 						break;
 				}
@@ -112,31 +112,31 @@
 			function carouselPrevProject(event){
 				event.preventDefault();
 				switch (Slider.sectionActive){
-					case 2:
+					case 1:
 						Franpos.prev();
 						break;
 
-					case 3:
+					case 2:
 						Ryan.prev();
 						break;
 
-					case 4:
+					case 3:
 						Milie.prev();
 						break;
 
-					case 5:
+					case 4:
 						Wellcome.prev();
 						break;
 
-					case 6:
+					case 5:
 						Lucky.prev();
 						break;
 
-					case 7:
+					case 6:
 						DasLab.prev();
 						break;
 
-					case 8:
+					case 7:
 						Voxel.prev();
 						break;
 				}
@@ -145,31 +145,31 @@
 			function carouselGoToProject(index){
 				
 				switch (Slider.sectionActive){
-					case 2:
+					case 1:
 						Franpos.goTo(index);
 						break;
 
-					case 3:
+					case 2:
 						Ryan.goTo(index);
 						break;
 
-					case 4:
+					case 3:
 						Milie.goTo(index);
 						break;
 
-					case 5:
+					case 4:
 						Wellcome.goTo(index);
 						break;
 
-					case 6:
+					case 5:
 						Lucky.goTo(index);
 						break;
 
-					case 7:
+					case 6:
 						DasLab.goTo(index);
 						break;
 
-					case 8:
+					case 7:
 						Voxel.goTo(index);
 						break;
 				}

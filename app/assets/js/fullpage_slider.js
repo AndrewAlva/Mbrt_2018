@@ -21,7 +21,7 @@
 		screens: [],
 
 		// Set the names of all the screens
-		screenNames: ['index', 'hello', 'franpos', 'ryan-hicks', 'milie-marie', 'wellcome', 'lucky-ideas', 'das-lab', 'voxel' ],
+		screenNames: ['index', 'franpos', 'ryan-hicks', 'milie-marie', 'wellcome', 'lucky-ideas', 'das-lab', 'voxel' ],
 
 		// Set the titles of all the screens
 		screenTitles: ['', 'Hello there IA Interactive!', 'What We Do', 'Branding', '', '', 'Brand Communications', '', '', '', '', '', 'Web Design & Development', '', '', 'Then, We Work Together?' ],
@@ -241,7 +241,7 @@
 			var index = Slider.sectionActive + 1;
 			if (index >= Slider.screens.length) {
 				// console.log('You have reached the bottom of the slider.');
-				Slider.goTo(2);
+				Slider.goTo(1);
 			} else {
 				Slider.goTo(index);
 			};

@@ -50,7 +50,8 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 		if (index >= 0) {
 			this.goTo(index);
 		} else {
-			console.log("There aren't more projects backward to show");
+			// console.log("There aren't more projects backward to show, let's go to previous section");
+			Slider.prev();
 		};
 	};
 
@@ -61,7 +62,7 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 			this.goTo(index);
 		} else {
 			if (this.canScroll == true) {
-				console.log("There aren't more projects forward to show, let's go to next section");
+				// console.log("There aren't more projects forward to show, let's go to next section");
 				Slider.next();
 			};
 		};

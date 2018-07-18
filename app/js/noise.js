@@ -1,5 +1,4 @@
 var canvas, context, maskedCanvas, maskedContext;
-// var nav1, nav2, nav3, nav4;
 
 var PI2 = Math.PI*2;
 
@@ -185,12 +184,51 @@ var Navs = {
 };
 
 
+// Noise effect
+    var noise = {
+        noiseData: [],
+        frame: 0,
+
+        create: function(){
+            var idata = context.createImageData(maxWidth, maxHeight);
+            var buffer32 = new Uint32Array(idata.data.buffer);
+            var len = buffer32.length;
+
+            for (var i = 0; i < len; i++) {
+                if(Math.random() < 0.25) {
+                    buffer32[i] = 0x09000000; /* Set random dots of noise gray, approx 1 out of 4 */
+                    //buffer32[i] = 0xff0000ff; /* Set random dots of noise gray, approx 1 out of 4 */
+                }
+            };
+
+            this.noiseData.push(idata);
+        },
+
+        paintNoise: function(){
+            if (this.frame === 5){
+                this.frame = 0;
+            } else {
+                this.frame++;
+            }
+
+            context.putImageData(this.noiseData[this.frame], 0, 0);
+        },
+
+        setup: function(){
+            for (var i = 0; i < 10; i++) {
+                this.create();
+            };
+        }
+    }
+
 
 function init() {
     canvas = document.getElementById('noise-canvas');
     context = canvas.getContext('2d');
     maskedCanvas = document.createElement('canvas');
     maskedContext = maskedCanvas.getContext('2d');
+
+    noise.setup();
 
     window.addEventListener("resize", function() {
         onResizeWindow();
@@ -240,6 +278,7 @@ function onResizeWindow() {
 
     Navs.getPosition();
 }
+
 init();
 animate();
 

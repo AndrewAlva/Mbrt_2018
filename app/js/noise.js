@@ -70,80 +70,26 @@ var Point = {
 };
 
 var Navs = {
-    array: [
-        {
-            id: document.getElementById("work-drawing"),
-            str: "WORK",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("skills-drawing"),
-            str: "SKILLS",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("about-drawing"),
-            str: "ABOUT",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("hire-drawing"),
-            str: "HIRE US",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("franpos-drawing"),
-            str: "FRANPOS",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("ryan-drawing"),
-            str: "RYAN HICKS",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("milie-drawing"),
-            str: "MILIE MARIE",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("wellcome-drawing"),
-            str: "WELLCOME",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("lucky-drawing"),
-            str: "LUCKY IDEAS",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("das-drawing"),
-            str: "DAS · LAB",
-            x: 0,
-            y: 0
-        },
-        {
-            id: document.getElementById("voxel-drawing"),
-            str: "VOXEL",
-            x: 0,
-            y: 0
-        }
-    ],
-
+    htmlObjs: [],
+    array: [],
     fontSize: 14,
     fontSizeSmall: 11,
     fontFamily: "'Suisse-Light', Sans-Serif",
     lineHeight: 1.2,
     fillStyle: "black",
+    init: function(){
+        this.getHtmlObjs();
+        this.createNavs();
+    },
+    getHtmlObjs: function(){
+        this.htmlObjs = $('.jsDrawing');
+    },
+    createNavs: function(){
+        for (var i = 0; i < this.htmlObjs.length; i++) {
+            Navs.array.push({id: document.getElementById( $(this.htmlObjs[i]).attr('id') ), str: $(this.htmlObjs[i]).attr('draw'), x: 0, y: 0});
+        };
+    },
+
     getPosition: function(){
         this.array.forEach(function(el) {
             var _bounding = el.id.getBoundingClientRect();
@@ -196,8 +142,8 @@ var Navs = {
 
             for (var i = 0; i < len; i++) {
                 if(Math.random() < 0.25) {
-                    buffer32[i] = 0x09000000; /* Set random dots of noise gray, approx 1 out of 4 */
-                    //buffer32[i] = 0xff0000ff; /* Set random dots of noise gray, approx 1 out of 4 */
+                    // buffer32[i] = 0x09000000; /* Set random dots of noise gray, approx 1 out of 4 */
+                    buffer32[i] = 0xff0000ff; /* Set random dots of noise gray, approx 1 out of 4 */
                 }
             };
 
@@ -228,7 +174,8 @@ function init() {
     maskedCanvas = document.createElement('canvas');
     maskedContext = maskedCanvas.getContext('2d');
 
-    noise.setup();
+    Navs.init();
+    // noise.setup();
 
     window.addEventListener("resize", function() {
         onResizeWindow();
@@ -259,6 +206,8 @@ function animate() {
 function render() {
     context.clearRect(0, 0, maxWidth, maxHeight);
     maskedContext.clearRect(0, 0, maxWidth, maxHeight);
+
+    // noise.paintNoise(noise.frame);
 
     Point.update();
     Navs.update();

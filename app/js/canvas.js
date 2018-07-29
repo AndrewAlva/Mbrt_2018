@@ -1,4 +1,4 @@
-var canvas, context, maskedCanvas, maskedContext;
+var canvas, context, maskedCanvas, maskedContext, noiseCanvas, noiseContext;
 
 var PI2 = Math.PI*2;
 
@@ -136,14 +136,14 @@ var Navs = {
         frame: 0,
 
         create: function(){
-            var idata = context.createImageData(maxWidth, maxHeight);
+            var idata = noiseContext.createImageData(maxWidth, maxHeight);
             var buffer32 = new Uint32Array(idata.data.buffer);
             var len = buffer32.length;
 
             for (var i = 0; i < len; i++) {
                 if(Math.random() < 0.25) {
-                    // buffer32[i] = 0x09000000; /* Set random dots of noise gray, approx 1 out of 4 */
-                    buffer32[i] = 0xff0000ff; /* Set random dots of noise gray, approx 1 out of 4 */
+                    buffer32[i] = 0x09000000; /* Set random dots of noise gray, approx 1 out of 4 */
+                    // buffer32[i] = 0xff0000ff; /* Set random dots of noise red, approx 1 out of 4 */
                 }
             };
 
@@ -157,7 +157,7 @@ var Navs = {
                 this.frame++;
             }
 
-            context.putImageData(this.noiseData[this.frame], 0, 0);
+            noiseContext.putImageData(this.noiseData[this.frame], 0, 0);
         },
 
         setup: function(){
@@ -169,13 +169,18 @@ var Navs = {
 
 
 function init() {
+    // Masking effect canvases
     canvas = document.getElementById('mask-canvas');
     context = canvas.getContext('2d');
     maskedCanvas = document.createElement('canvas');
     maskedContext = maskedCanvas.getContext('2d');
 
+    // Noise canvas
+    noiseCanvas = document.getElementById('noise-canvas');
+    noiseContext = noiseCanvas.getContext('2d');
+
     Navs.init();
-    // noise.setup();
+    noise.setup();
 
     window.addEventListener("resize", function() {
         onResizeWindow();
@@ -207,7 +212,7 @@ function render() {
     context.clearRect(0, 0, maxWidth, maxHeight);
     maskedContext.clearRect(0, 0, maxWidth, maxHeight);
 
-    // noise.paintNoise(noise.frame);
+    noise.paintNoise(noise.frame);
 
     Point.update();
     Navs.update();
@@ -224,6 +229,8 @@ function onResizeWindow() {
     canvas.height = maxHeight;
     maskedCanvas.width = maxWidth;
     maskedCanvas.height = maxHeight;
+    noiseCanvas.width = maxWidth;
+    noiseCanvas.height = maxHeight;
 
     Navs.getPosition();
 }

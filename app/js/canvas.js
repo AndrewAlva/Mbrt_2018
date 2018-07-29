@@ -169,7 +169,7 @@ var Navs = {
 
 
 function init() {
-    canvas = document.getElementById('noise-canvas');
+    canvas = document.getElementById('mask-canvas');
     context = canvas.getContext('2d');
     maskedCanvas = document.createElement('canvas');
     maskedContext = maskedCanvas.getContext('2d');

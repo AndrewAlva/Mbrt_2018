@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Initialized app');
 
   // Get noise background effect
-  require('./noise');
+  require('./canvas');
 
   // Get skills section js
   require('./skills');

@@ -119,7 +119,7 @@ var Navs = {
                 maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSize * 0.965));
             } else {
                 maskedContext.font = Navs.fontSizeSmall + "px " + Navs.fontFamily;
-                maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSizeSmall * 0.99));
+                maskedContext.fillText(el.str, el.x, el.y + (Navs.fontSizeSmall * 0.965));
 
                 maskedContext.fillStyle = "#06111a";
                 maskedContext.fillRect((maxWidth - 14), (el.y + 6), 14, 1);

@@ -21,7 +21,7 @@
 		screens: [],
 
 		// Set the names of all the screens
-		screenNames: ['index', 'franpos', 'ryan-hicks', 'milie-marie', 'wellcome', 'lucky-ideas', 'das-lab', 'voxel' ],
+		screenNames: ['index', 'wellcome', 'milie-marie', 'das-lab', 'lucky-ideas', 'voxel' ],
 
 		// Set the titles of all the screens
 		screenTitles: ['', 'Hello there IA Interactive!', 'What We Do', 'Branding', '', '', 'Brand Communications', '', '', '', '', '', 'Web Design & Development', '', '', 'Then, We Work Together?' ],

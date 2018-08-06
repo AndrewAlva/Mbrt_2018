@@ -10,25 +10,19 @@
 		Slider.loading();
 
 		// Set and Initialize all carousels
-			var Franpos = new Carousel('#section-1', '#franpos-', '#franposBar-');
-			Franpos.init();
-
-			var Ryan = new Carousel('#section-2', '#ryan-', '#ryanBar-');
-			Ryan.init();
-
-			var Milie = new Carousel('#section-3', '#milie-', '#milieBar-');
-			Milie.init();
-
-			var Wellcome = new Carousel('#section-4', '#wellcome-', '#wellcomeBar-');
+			var Wellcome = new Carousel('#section-1', '#wellcome-', '#wellcomeBar-');
 			Wellcome.init();
 
-			var Lucky = new Carousel('#section-5', '#lucky-', '#luckyBar-');
-			Lucky.init();
+			var Milie = new Carousel('#section-2', '#milie-', '#milieBar-');
+			Milie.init();
 
-			var DasLab = new Carousel('#section-6', '#daslab-', '#daslabBar-');
+			var DasLab = new Carousel('#section-3', '#daslab-', '#daslabBar-');
 			DasLab.init();
 
-			var Voxel = new Carousel('#section-7', '#voxel-', '#voxelBar-');
+			var Lucky = new Carousel('#section-4', '#lucky-', '#luckyBar-');
+			Lucky.init();
+
+			var Voxel = new Carousel('#section-5', '#voxel-', '#voxelBar-');
 			Voxel.init();
 		// END Set and Initialize all carousels
 
@@ -80,32 +74,23 @@
 				event.preventDefault();
 				switch (Slider.sectionActive){
 					case 1:
-						Franpos.next();
-						break;
-
-					case 2:
-						Ryan.next();
-						break;
-
-					case 3:
-						Milie.next();
-						break;
-
-					case 4:
 						Wellcome.next();
 						break;
 
-					case 5:
-						Lucky.next();
+					case 2:
+						Milie.next();
 						break;
 
-					case 6:
+					case 3:
 						DasLab.next();
 						break;
 
-					case 7:
-						Voxel.next();
+					case 4:
+						Lucky.next();
 						break;
+
+					case 5:
+						Voxel.next();
 				}
 			}
 
@@ -113,32 +98,23 @@
 				event.preventDefault();
 				switch (Slider.sectionActive){
 					case 1:
-						Franpos.prev();
-						break;
-
-					case 2:
-						Ryan.prev();
-						break;
-
-					case 3:
-						Milie.prev();
-						break;
-
-					case 4:
 						Wellcome.prev();
 						break;
 
-					case 5:
-						Lucky.prev();
+					case 2:
+						Milie.prev();
 						break;
 
-					case 6:
+					case 3:
 						DasLab.prev();
 						break;
 
-					case 7:
-						Voxel.prev();
+					case 4:
+						Lucky.prev();
 						break;
+
+					case 5:
+						Voxel.prev();
 				}
 			}
 
@@ -146,32 +122,23 @@
 				
 				switch (Slider.sectionActive){
 					case 1:
-						Franpos.goTo(index);
-						break;
-
-					case 2:
-						Ryan.goTo(index);
-						break;
-
-					case 3:
-						Milie.goTo(index);
-						break;
-
-					case 4:
 						Wellcome.goTo(index);
 						break;
 
-					case 5:
-						Lucky.goTo(index);
+					case 2:
+						Milie.goTo(index);
 						break;
 
-					case 6:
+					case 3:
 						DasLab.goTo(index);
 						break;
 
-					case 7:
-						Voxel.goTo(index);
+					case 4:
+						Lucky.goTo(index);
 						break;
+
+					case 5:
+						Voxel.goTo(index);
 				}
 			}
 	});

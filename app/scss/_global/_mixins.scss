@@ -28,6 +28,22 @@
     transform: rotate($deg);
 }
 
+@mixin rotate-translate($deg, $Xmove, $Ymove){
+    -webkit-transform: rotate($deg) translate($Xmove, $Ymove);
+    -moz-transform: rotate($deg) translate($Xmove, $Ymove);
+    -ms-transform: rotate($deg) translate($Xmove, $Ymove);
+    -o-transform: rotate($deg) translate($Xmove, $Ymove);
+    transform: rotate($deg) translate($Xmove, $Ymove);
+}
+
+@mixin scaleX($ratio){
+    -webkit-transform: scaleX($ratio);
+    -moz-transform: scaleX($ratio);
+    -ms-transform: scaleX($ratio);
+    -o-transform: scaleX($ratio);
+    transform: scaleX($ratio);
+}
+
 @mixin origin($Xmove, $Ymove){
 	-webkit-transform-origin: $Xmove $Ymove;
     -moz-transform-origin: $Xmove $Ymove;
@@ -73,11 +89,11 @@
 }
 
 @mixin transitions($timing){
-	-webkit-transition: all $timing cubic-bezier(.65,0,.25,1);
-	   -moz-transition: all $timing cubic-bezier(.65,0,.25,1);
-	    -ms-transition: all $timing cubic-bezier(.65,0,.25,1);
-	     -o-transition: all $timing cubic-bezier(.65,0,.25,1);
-	        transition: all $timing cubic-bezier(.65,0,.25,1);
+	-webkit-transition: all $timing cubic-bezier(.35,0,.25,1);
+	   -moz-transition: all $timing cubic-bezier(.35,0,.25,1);
+	    -ms-transition: all $timing cubic-bezier(.35,0,.25,1);
+	     -o-transition: all $timing cubic-bezier(.35,0,.25,1);
+	        transition: all $timing cubic-bezier(.35,0,.25,1);
 }
 
 @mixin trans-delayed($timing, $delay){

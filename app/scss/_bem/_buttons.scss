@@ -1,8 +1,23 @@
 .button{
+	position: relative;
 	height: 50px;
 	text-decoration: none;
 	display: table;
-	border-top: 1px solid #afafaf;
+	overflow: hidden;
+	// border-top: 1px solid #afafaf;
+
+	&:before, &:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		top: 0; left: 0;
+		background-color: #afafaf;
+		@include transitions(1s);
+	}
+	&:after{
+		@include translate(-180%,0);
+	}
 
 	&__caption{
 		position: relative;
@@ -29,7 +44,9 @@
 			width: 100%;
 			height: 1px;
 			background-color: $lm-gray;
+			@include origin(left, center);
 
+			@include transitions(.6s);
 		}
 
 		&:after{
@@ -44,8 +61,24 @@
 			border-right: 1px solid $lm-gray;
 
 			@include origin(center, center);
-			@include rotate(-45deg);
+			// @include rotate(-45deg);
+			@include rotate-translate(-45deg,0,0);
 
+			@include transitions(.6s);
+		}
+	}
+
+	&:hover{
+		&:before{@include translate(180%,0);}
+		&:after{@include translate(0,0);}
+
+		.button__arrow{
+			&:before{
+				@include scaleX(1.35);
+			}
+			&:after{
+				@include rotate-translate(-45deg, 7px, 7px);
+			}
 		}
 	}
 }

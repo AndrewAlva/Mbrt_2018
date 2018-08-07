@@ -217,7 +217,7 @@
 
 			// If the user arrived to any section except index section show the main navs, else hide them
 			if(Slider.sectionActive >= 1) Slider.showMainNavs();
-			else Slider.hideMainNavs();
+			// else Slider.hideMainNavs(); /* Small hack to make masked content work */
 
 			// Determine the OS of the device and adjust sensibility according to it
 			Slider.is_Mac = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i) ? true : false;

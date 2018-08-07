@@ -10,6 +10,12 @@
 		float: right;
 	}
 
+	&--3-half-col{
+		width: 340px;
+		height: 360px;
+		background-color: #fcfcfc;
+	}
+
 	&--5-col{
 		width: 500px;
 	}
@@ -27,4 +33,15 @@
 	img{
 		width: 100%;
 	}
+
+	.svg-img{
+		position: absolute;
+		margin: auto;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+	}
+		#responsive-svg{width: 201px;}
+		#ux-svg{width: 181px;}
+		#brandid-svg{width: 154px;}
+		#print-svg{width: 132px;}
 }

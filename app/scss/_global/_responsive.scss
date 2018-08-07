@@ -192,11 +192,9 @@
 				.innerCarousel{
 					.carouselImages{
 						.projectsWrapper{
-							.projectPhoto{
-								.projectData{
-									.innerCenteredBox{
-										left: 13%;
-									}
+							.projectData{
+								.innerCenteredBox{
+									left: 13%;
 								}
 							}
 						}
@@ -387,12 +385,10 @@
 
 					.carouselImages{
 						.projectsWrapper{
-							.projectPhoto{
-								.projectData{
-									.innerCenteredBox{
-										height: 34.5%;
-										left: 11%;
-									}
+							.projectData{
+								.innerCenteredBox{
+									height: 34.5%;
+									left: 11%;
 								}
 							}
 						}
@@ -647,11 +643,9 @@
 					
 					.carouselImages{
 						.projectsWrapper{
-							.projectPhoto{
-								.projectData{
-									.innerCenteredBox{
-										left: 9%;
-									}
+							.projectData{
+								.innerCenteredBox{
+									left: 9%;
 								}
 							}
 						}
@@ -854,12 +848,10 @@
 					
 					.carouselImages{
 						.projectsWrapper{
-							.projectPhoto{
-								.projectData{
-									.innerCenteredBox{
-										height: 38.5%;
-										left: 7%;
-									}
+							.projectData{
+								.innerCenteredBox{
+									height: 38.5%;
+									left: 7%;
 								}
 							}
 						}
@@ -908,33 +900,31 @@
 
 					.carouselImages{
 						.projectsWrapper{
-							.projectPhoto{
-								.projectData{
-									.innerCenteredBox{
-										height: 31.8%;
-										left: 5%;
+							.projectData{
+								.innerCenteredBox{
+									height: 31.8%;
+									left: 5%;
 
-										h5{
-											font-size: 16.9px;
-										}
-
-										p{
-											// height: 6.5%;
-											height: unset;
-											font-size: 14px;
-											line-height: 1.3em;
-											margin-bottom: 12%;
-										}
+									h5{
+										font-size: 16.9px;
 									}
 
-									.visitWebsite{
-										width: 105px;
-										height: 23px;
-										line-height: 1.5em;
+									p{
+										// height: 6.5%;
+										height: unset;
+										font-size: 14px;
+										line-height: 1.3em;
+										margin-bottom: 12%;
+									}
+								}
 
-										a{
-											font-size: 10.5px;
-										}
+								.visitWebsite{
+									width: 105px;
+									height: 23px;
+									line-height: 1.5em;
+
+									a{
+										font-size: 10.5px;
 									}
 								}
 							}
@@ -1530,10 +1520,8 @@
 				.innerCarousel {
 					.carouselImages {
 						.projectsWrapper{
-							.projectPhoto{
-								.projectData{
-									display: none;
-								}
+							.projectData{
+								display: none;
 							}
 						}
 

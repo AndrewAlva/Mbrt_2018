@@ -48,8 +48,24 @@
 		color: $lm-gray;
 
 		a{
+			position: relative;
 			text-decoration: none;
 			color: inherit;
+
+			&:before{
+				content: attr(fx-text);
+				white-space: nowrap;
+				position: absolute;
+				width: 0;
+				height: 100%;
+				left: 0;
+				color: $black;
+				overflow: hidden;
+				@include transitions(0.65s);
+			}
+			&:hover:before{
+				width: 100%;
+			}
 		}
 	}
 
@@ -69,9 +85,11 @@
 
 	&__scroll-cta{
 		position: absolute;
+		width: 21px;
 		height: 100%;
 		top: 0;
 		right: 80px;
+		-webkit-writing-mode: vertical-lr;
 		writing-mode: vertical-lr;
 		@include rotate(180deg);
 		text-align: center;

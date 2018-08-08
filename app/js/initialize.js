@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get noise background effect
   require('./canvas');
 
-  // Get skills section js
-  require('./skills');
-
   // Get form interactions js
   require('./form');
+
+  // Get footer interactions js
+  require('./footer');
 });

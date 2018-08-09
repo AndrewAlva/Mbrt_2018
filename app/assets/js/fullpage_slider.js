@@ -21,10 +21,7 @@
 		screens: [],
 
 		// Set the names of all the screens
-		screenNames: ['index', 'wellcome', 'milie-marie', 'das-lab', 'lucky-ideas', 'voxel' ],
-
-		// Set the titles of all the screens
-		screenTitles: ['', 'Hello there IA Interactive!', 'What We Do', 'Branding', '', '', 'Brand Communications', '', '', '', '', '', 'Web Design & Development', '', '', 'Then, We Work Together?' ],
+		screenNames: ['wellcome', 'milie-marie', 'das-lab', 'lucky-ideas', 'voxel' ],
 
 		// Set the screen covers id's
 		screenCovers: [],
@@ -173,24 +170,14 @@
 
 		// Hide the loading screen
 		loaded: function(){
-			// Restart Intro gif animation
-			$('#mbrtGIF').attr('src', 'img/brand/main_logo.gif?' + Math.random() + ' alt="Mandelbrot Brands Studio">');
+			// Active flag to prevent loading function
+			Slider.isLoading = false;
 
-			setTimeout(function(){
-				// Active flag to prevent loading function
-				Slider.isLoading = false;
-
-				// Fade out loader
-				$('#mbrtLoader').addClass('crystalLoader');
-				
-				// Remove loader after fadeout is complete
-				setTimeout(function(){$('#mbrtLoader').remove();},1600);
-
-				// Color the new section title
-				Slider.colorTitle('.animatedTitle-' + Slider.sectionActive);
-
-				
-			}, Slider.duration);
+			// Fade out loader
+			$('#mbrtLoader').addClass('crystalLoader');
+			
+			// Remove loader after fadeout is complete
+			setTimeout(function(){$('#mbrtLoader').remove();},1600);
 		},
 
 		// Initiate function
@@ -215,9 +202,8 @@
 			// Display the current active section
 			$('#section-' + Slider.sectionActive).addClass('activeSlide');
 
-			// If the user arrived to any section except index section show the main navs, else hide them
-			if(Slider.sectionActive >= 1) Slider.showMainNavs();
-			// else Slider.hideMainNavs(); /* Small hack to make masked content work */
+			// Show the main navs
+			Slider.showMainNavs();
 
 			// Determine the OS of the device and adjust sensibility according to it
 			Slider.is_Mac = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i) ? true : false;
@@ -230,7 +216,8 @@
 		prev: function(){
 			var index = Slider.sectionActive - 1;
 			if (index < 0) {
-				console.log('You have reached the top of the slider.');
+				// console.log('You have reached the top of the slider.');
+				Slider.goTo(Slider.screens.length - 1);
 			} else {
 				Slider.goTo(index);
 			};
@@ -241,7 +228,7 @@
 			var index = Slider.sectionActive + 1;
 			if (index >= Slider.screens.length) {
 				// console.log('You have reached the bottom of the slider.');
-				Slider.goTo(1);
+				Slider.goTo(0);
 			} else {
 				Slider.goTo(index);
 			};
@@ -253,11 +240,6 @@
 			if (Slider.canScroll && Slider.sectionActive != index) {
 				// Turn on the flag to prevent overlapping section transitions
 				Slider.canScroll = false;
-
-				// Check if the user is going/leaving the index section 
-				// to hide/show the main navs
-				if (index == 0 && Slider.sectionActive >= 1) Slider.hideMainNavs();
-				else if (index >= 1 && Slider.sectionActive == 0) Slider.showMainNavs();
 
 				// Declare variables to define the direction of the animations
 				var currentSectionMove;
@@ -368,11 +350,9 @@
 
 		// Style the right nav bar according to the section displayed
 		setMainNavs: function(index){
-			// If user went to any section except index section, update the 'right nav bar' active bar
-			if(index >= 1) {
-				$('.navBar').not('#navBar-' + index).removeClass('activeNavBar');
-				$('#navBar-' + index).addClass('activeNavBar');
-			}; 
+			// Update the 'right nav bar' active bar
+			$('.navBar').not('#navBar-' + index).removeClass('activeNavBar');
+			$('#navBar-' + index).addClass('activeNavBar');
 		},
 
 		// HERE BEGIN THE TEXT ANIMATIONS
@@ -451,17 +431,6 @@
 		},
 
 		// SPECIFIC SECTION CHAINED ANIMATIONS
-		// Informative sections [Welcome, Services and Contact]
-		informativeAnimation: function(){
-			Slider.cleanAnimations('#section-1', '#sectionTitle-1');
-			Slider.writeTitle('#sectionTitle-1', Slider.screenTitles[1], 0, 100, function(){
-				Slider.showTextLines('#section-1', function(){
-					Slider.colorSubtitles('#section-1', function(){
-						console.log('Informative animation done!');
-					});
-				});
-			});
-		},
 
 		// Cover sections [Branding, Brand communication and Web Design & Development]
 		coverAnimation: function(){},

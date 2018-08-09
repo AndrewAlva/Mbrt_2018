@@ -12,6 +12,7 @@
 			position: relative;
 			display: table-cell;
 			vertical-align: middle;
+			font-size: 23px;
 		}
 	}
 	@media screen and (min-width: 1200px){
@@ -1466,244 +1467,291 @@
 }
 
 // Mobile styling
-@media screen and (max-width: 767.98px){
-	#fullWrapper {
-		#mbrtLoader{
-			.centeredWrapper{
-				width: 60%;
-				height: 290px;
+	@media screen and (max-width: 767.98px){
+		#fullWrapper {
+			#mbrtLoader{
+				.centeredWrapper{
+					width: 60%;
+					height: 290px;
 
-				.quotesBox{
-					height: 55px;
-
-					p{
-						height: unset;
-						line-height: 18px;
-						font-size: 14px;
-					}
-				}
-
-				.loadingBox{
-					height: 100px;
-
-					h1{
-						display: table;
-						height: unset;
-						font-size: 26px;
-					}
-				}
-
-				.instructionsBox{
-					.icons{
-						height: 80px;
-						margin-top: 0;
-					}
-
-					.description{
-						margin-top: 20px;
+					.quotesBox{
+						height: 55px;
 
 						p{
-							font-size: 14px;
+							height: unset;
 							line-height: 18px;
-						}
-					}
-				}
-			}
-		}
-
-		#mbrtWrapper{
-			#rightBarsNav{
-				width: 40px;
-
-				.barsWrapper{
-					.navBar{
-						@include translate(7px, 0);
-						padding: 4px 0;
-
-						.navNumber, .navName{
-							display: none;
+							font-size: 14px;
 						}
 					}
 
-					.activeNavBar{
-						@include translate(0, 0);
-					}
-				}
-			}
-
-			.introSection{
-				.introLetter{
-					.introTitle{
-						height: 35px;
-						line-height: 2.4em;
+					.loadingBox{
+						height: 100px;
 
 						h1{
-							height: 35px;
+							display: table;
+							height: unset;
+							font-size: 26px;
 						}
 					}
 
-					.introParagraph{
-						p{
-							font-size: 9px;
+					.instructionsBox{
+						.icons{
+							height: 80px;
+							margin-top: 0;
 						}
-					}
 
-					.introQuotes{
-						height: 18px;
+						.description{
+							margin-top: 20px;
 
-						h2{
-							font-size: 13px;
+							p{
+								font-size: 14px;
+								line-height: 18px;
+							}
 						}
 					}
 				}
 			}
 
-			.carouselSection {
-				padding: 120px 20px;
+			#mbrtWrapper{
+				#rightBarsNav{
+					display: none;
+					width: 40px;
 
-				.innerCarousel {
-					.carouselImages {
-						.projectsWrapper{
-							.projectData{
+					.barsWrapper{
+						.navBar{
+							@include translate(7px, 0);
+							padding: 4px 0;
+
+							.navNumber, .navName{
 								display: none;
 							}
 						}
 
-						.arrow{
-							z-index: 1;
-							width: 40px;
-							height: 40px;
-							top: auto;
-							bottom: 5%;
-							@include hoverDropShadow();
-						}
-
-						.leftArrow{
-							left: -40%;
-							right: 0;
-						}
-						.rightArrow{
-							right: -40%;
-							left: 0;
+						.activeNavBar{
+							@include translate(0, 0);
 						}
 					}
+				}
 
-					.projectDetails{
-						font-size: 65%;
-						bottom: -60px;
+				.introSection{
+					.introLetter{
+						.introTitle{
+							height: 35px;
+							line-height: 2.4em;
 
-						.description{
-							.name{
-								margin-left: 2px;
-								margin-right: 5px;
-							}
-
-							.service{
-								display: block;
-								left: 16px;
+							h1{
+								height: 35px;
 							}
 						}
 
-						.slideCounter{
-							position: absolute;
-							top: -15px;
-							right: 0;
+						.introParagraph{
+							p{
+								font-size: 9px;
+							}
+						}
+
+						.introQuotes{
+							height: 18px;
+
+							h2{
+								font-size: 13px;
+							}
+						}
+					}
+				}
+
+				.carouselSection {
+					// padding: 120px 20px;
+					padding: 0;
+					position: absolute;
+					height: 270px;
+					margin: auto;
+					top: 0;
+					bottom: 5%;
+					@include boxSizeUnfit;
+
+					.innerCarousel {
+						.carouselImages {
+							.projectsWrapper{
+								.projectData{
+									// display: none;
+
+									a{
+										z-index: -1;
+										@include trans-delayed(0s, 10s);
+									}
+
+									&:hover{
+										a{
+											z-index: 1;
+										}
+									}
+								}
+							}
+
+							.arrow{
+								display: none;
+								z-index: 1;
+								width: 40px;
+								height: 40px;
+								top: auto;
+								bottom: 5%;
+								@include hoverDropShadow();
+							}
+
+							.leftArrow{
+								left: -40%;
+								right: 0;
+							}
+							.rightArrow{
+								right: -40%;
+								left: 0;
+							}
+						}
+
+						.projectDetails{
+							font-size: 85%;
+							bottom: -83px;
+							padding: 0 20px;
+							@include boxSizeFit;
+
+							.description{
+								.index{
+									font-size: 15px;
+								}
+
+								.name{
+									margin-left: 3px;
+									margin-right: 5px;
+									margin-bottom: 5px;
+									font-size: 31px;
+								}
+
+								.service{
+									display: block;
+									left: 27px;
+									font-size: 0.98em;
+								}
+							}
+
+							.slideCounter{
+								position: absolute;
+								top: 1px;
+								right: 20px;
+								font-size: 16.32px;
+
+								.divider{
+									width: 10px;
+									top: 9px;
+								}
+							}
+						}
+					}
+				}
+
+				#section-0{
+					#mainLogo{
+						width: 260px;
+						height: 151px;
+						left: 92px;
+					}
+
+					#startExploring{
+						width: 40px;
+						height: 60px;
+
+						.startText{
+							height: unset;
+							font-size: 9pt;
+							line-height: unset;
+							letter-spacing: 1px;
+							margin-bottom: 7px;
+						}
+
+						.startGo{
+							height: 30px;
+						}
+					}
+				}
+
+				#section-1 {
+					#receiverLetter{
+						height: 300px;
+
+						.introTitle{
+							width: 212px;
+
+							h1{
+								font-size: 24px;
+							}
+						}
+						.introParagraph{
+							margin-bottom: 20px;
+						}
+						.introQuotes{
+							margin-bottom: 15px;
+						}
+
+
+						#welcomePara-1{
+							height: 80px;
+						}
+
+						#welcomePara-2, #welcomePara-3{
+						}
+
+						#welcomeQuote-1{
+							width: 245px;
+						}
+
+						#welcomeQuote-2{
+							width: 205px;
+						}
+					}
+				}
+
+				#rrssFooter{
+					right: 20px;
+					.rrssList{
+						.rrssIcon{
+							margin-left: 25px;
 						}
 					}
 				}
 			}
+		}
 
-			#section-0{
-				#mainLogo{
-					width: 260px;
-					height: 151px;
-					left: 92px;
-				}
+		#topMainNav{
+			height: 50px;
+			padding: 0 20px;
+			font-size: 80%;
 
-				#startExploring{
-					width: 40px;
-					height: 60px;
-
-					.startText{
-						height: unset;
-						font-size: 9pt;
-						line-height: unset;
-						letter-spacing: 1px;
-						margin-bottom: 7px;
-					}
-
-					.startGo{
-						height: 30px;
-					}
-				}
+			#topLeftLogo{
+				width: 56px;
 			}
 
-			#section-1 {
-				#receiverLetter{
-					height: 300px;
-
-					.introTitle{
-						width: 212px;
-
-						h1{
-							font-size: 24px;
-						}
-					}
-					.introParagraph{
-						margin-bottom: 20px;
-					}
-					.introQuotes{
-						margin-bottom: 15px;
-					}
-
-
-					#welcomePara-1{
-						height: 80px;
-					}
-
-					#welcomePara-2, #welcomePara-3{
-					}
-
-					#welcomeQuote-1{
-						width: 245px;
-					}
-
-					#welcomeQuote-2{
-						width: 205px;
-					}
-				}
-			}
-
-			#rrssFooter{
+			.topRightNav{
+				height: 20px;
 				right: 20px;
-				.rrssList{
-					.rrssIcon{
-						margin-left: 10px;
-					}
+
+				.mainNavButtons{
+					margin-left: 10px;
+					font-size: 12px;
 				}
 			}
 		}
-	}
 
-	#topMainNav{
-		height: 50px;
-		padding: 0 20px;
-		font-size: 80%;
-
-		.topRightNav{
-			height: 20px;
-			right: 20px;
-
-			.mainNavButtons{
-				margin-left: 10px;
-			}
+		.sprite-downArrow{
+			width: 30px;
+			height: 30px;
+			background-position: -5px -37px;
+			background-size: 157px;
 		}
 	}
 
-	.sprite-downArrow{
-		width: 30px;
-		height: 30px;
-		background-position: -5px -37px;
-		background-size: 157px;
+	// Landscape mobile
+	@media screen and (max-width: 767.98px) and (orientation: landscape){
+		#fullWrapper #mbrtWrapper .carouselSection{
+			padding: 90px 0;
+		}
 	}
-}

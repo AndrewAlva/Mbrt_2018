@@ -246,10 +246,10 @@
 				var newSectionMove;
 				// Detect if user is going to the Next or prev section, 
 				// sectionActive < index means Next
-				if (Slider.sectionActive < index){
+				if ( (Slider.sectionActive < index || (Slider.sectionActive == Slider.screens.length - 1 && index == 0) ) && !(Slider.sectionActive == 0 && index == Slider.screens.length - 1) ){
 					currentSectionMove = 'up';
 					newSectionMove = 'down';
-				} else if (Slider.sectionActive > index){
+				} else if (Slider.sectionActive > index || (Slider.sectionActive == 0 && index == Slider.screens.length - 1)){
 					currentSectionMove = 'down';
 					newSectionMove = 'up';
 				};

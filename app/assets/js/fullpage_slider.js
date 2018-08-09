@@ -15,7 +15,7 @@
 		instructionsTiming: 4000,
 
 		// Loading portfolio quotes, in this case are the studio quotes
-		mbrtQuotes: ["Calling for the craftsmen, engineers, gurus and everyone on the studio, wait.", "We are crafting the last details, almost there.", "Good things come to those who know when to wait.", "Welcome, we were expecting you. Sit down, it will take just a moment."],
+		mbrtQuotes: ["We are crafting the last details, almost there.", "Good things come to those who know when to wait.", "Thanks for visiting, we were expecting you."],
 
 		// Set the array with all the screens to manipulate
 		screens: [],

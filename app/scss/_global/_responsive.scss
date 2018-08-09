@@ -1389,6 +1389,22 @@
 	}
 }
 
+// Tablet Size
+// Special style for touch devices
+@media screen and (max-width: 1024px){
+	// Hide pointer mask canvas
+	#mask-canvas{display: none;}
+
+	// Edit instructions
+	#fullWrapper #mbrtLoader .centeredWrapper{
+		height: 160px !important;
+
+		.instructionsBox{
+			.icons, .description{display: none;}
+		}
+	}
+}
+
 // Lower than Tablet Size
 @media screen and (max-width: 1023px){
 	#mobileWrapper{

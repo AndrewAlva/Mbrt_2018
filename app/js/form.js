@@ -34,5 +34,6 @@
 			if(formFilled == true){
 				// Submit form
 				console.log("Submitting form");
+				this.parentNode.submit();
 			}
 		});

@@ -14,8 +14,8 @@
         <link type="text/plain" rel="author" href="/humans.txt" />
 
         <!-- PLACE ORIGINAL FACEBOOK META TAGS -->
-            <meta property="fb:admins" content="YOUR_ID_ADMIN_OF_THE_APP" />
-            <meta property="fb:app_id" content="PLACE_YOUR_ID" />
+            <!-- <meta property="fb:admins" content="YOUR_ID_ADMIN_OF_THE_APP" />
+            <meta property="fb:app_id" content="PLACE_YOUR_ID" /> -->
             
             <meta property="og:title" content="Branding & Digital Craft Duo" />
             <meta property="og:site_name" content="Hire Us | Mandelbrot Studio"/>
@@ -29,7 +29,7 @@
             <meta property="og:locale" content="es_MX" />
 
             <!-- PLACE AN IMAGE FOR_THE SHARE GRAPH -->
-            <meta property="og:image" content="PLACE_IMAGE_URL" />
+            <!-- <meta property="og:image" content="PLACE_IMAGE_URL" /> -->
         <!-- END FB META TAGS -->
 
         <!-- Place favicon.png and apple icon in the root directory -->
@@ -70,29 +70,29 @@
                             </div>
 
                             <h4 class="hero-text">
-                                We'll just love to hear about your project, tell us about it!
+                                We're looking forward to know more about your project.
                             </h4>
                         </div>
 
                         <div class="form-wrapper"> 
-                            <form id="hiring-form" class="mbrt-form" action="#">
+                            <form id="hiring-form" class="mbrt-form" name="hiring-form" action="mail.php" method="POST" enctype="multipart/form-data">
                                 <h2 class="mbrt-form__title">How to contact you</h2>
 
                             	<div id="contact-inputs-row" class="inputs-row">
                             		<div class="input-wrapper input-wrapper--third-size">
-                            			<input id="name-input" type="text" class="mbrt-input input-fx required-input" required>
+                            			<input id="name-input" class="mbrt-input input-fx required-input" name="name" type="text" required>
                             			<label for="name-input" class="mbrt-input__label label-fx">Name*</label>
                             			<figure class="mbrt-input__border border-fx"></figure>
                             		</div>
 
                                     <div class="input-wrapper input-wrapper--third-size">
-                                        <input id="company-input" type="text" class="mbrt-input input-fx">
+                                        <input id="company-input" class="mbrt-input input-fx" name="company" type="text">
                                         <label for="company-input" class="mbrt-input__label label-fx">Company</label>
                                         <figure class="mbrt-input__border border-fx"></figure>
                                     </div>
 
                                     <div class="input-wrapper input-wrapper--third-size">
-                                        <input id="email-input" type="email" class="mbrt-input input-fx required-input" required>
+                                        <input id="email-input" class="mbrt-input input-fx required-input" name="email" type="email" required>
                                         <label for="email-input" class="mbrt-input__label label-fx">E-mail*</label>
                                         <figure class="mbrt-input__border border-fx"></figure>
                                     </div>
@@ -103,19 +103,19 @@
 
                                 <div id="project-inputs-row" class="inputs-row">
                                     <div class="input-wrapper input-wrapper--third-size">
-                                        <input id="budget-input" type="text" class="mbrt-input input-fx">
+                                        <input id="budget-input" class="mbrt-input input-fx" name="budget" type="text">
                                         <label for="budget-input" class="mbrt-input__label label-fx">Budget</label>
                                         <figure class="mbrt-input__border border-fx"></figure>
                                     </div>
 
                                     <div class="input-wrapper input-wrapper--third-size">
-                                        <input id="timeline-input" type="text" class="mbrt-input input-fx">
+                                        <input id="timeline-input" class="mbrt-input input-fx" name="timeline" type="text">
                                         <label for="timeline-input" class="mbrt-input__label label-fx">Timeline</label>
                                         <figure class="mbrt-input__border border-fx"></figure>
                                     </div>
 
                                     <div class="input-wrapper input-wrapper--third-size">
-                                        <input id="category-input" type="text" class="mbrt-input input-fx">
+                                        <input id="category-input" class="mbrt-input input-fx" name="category" type="text">
                                         <label for="category-input" class="mbrt-input__label label-fx">Category</label>
                                         <figure class="mbrt-input__border border-fx"></figure>
                                     </div>
@@ -123,7 +123,7 @@
 
                                 <div id="description-input-row" class="inputs-row">
                                     <div class="input-wrapper">
-                                        <input id="description-input" type="text" class="mbrt-input input-fx required-input" required>
+                                        <input id="description-input" class="mbrt-input input-fx required-input" name="project" type="text" required>
                                         <label for="description-input" class="mbrt-input__label label-fx">Project Description*</label>
                                         <figure class="mbrt-input__border border-fx"></figure>
                                     </div>

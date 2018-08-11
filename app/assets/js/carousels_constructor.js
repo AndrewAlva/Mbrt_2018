@@ -1,27 +1,14 @@
 
 // Carousel object constructor
-function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBrandPrefix, projBriefPrefix, projClientPrefix){
+function Carousel(sectId, projPrefix){
 	// Flag to prevent overlapping transitions between sections
 	this.canScroll = true;
-
-	// Declare if the carousel is horizontal or vertical
-	this.vertical = carouselOrientation;
 
 	// Section ID where the carousel is
 	this.sectionID = sectId;
 
 	// Projects prefix to select them with jQuery $
 	this.projectsPrefix = projPrefix;
-
-	// Projects nav bars prefix to select them with jQuery $
-	this.projectsBarPrefix = projBarPrefix;
-
-	// Projects brand data prefix to select them with jQuery $
-	this.projectsBrandPrefix = projBrandPrefix;
-	// Projects brief data prefix to select them with jQuery $
-	this.projectsBriefPrefix = projBriefPrefix;
-	// Projects client data prefix to select them with jQuery $
-	this.projectsClientPrefix = projClientPrefix;
 
 	// Set the array with all the screens to manipulate
 	this.projects = [];
@@ -91,11 +78,6 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 			// Style the nav bars of the project
 			this.setNavs(index);
 
-			// Hide the project data if this is a vertical carousel
-			if (this.vertical == true) {
-				this.deactiveProjectData();
-			};
-
 			// Move the current project outside the wrapper
 			$(this.projectsPrefix + this.activeProject).addClass(currentProjectMove);
 
@@ -110,14 +92,6 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 
 				// Move the new project into the wrapper
 				$(this.projectsPrefix + index).removeClass(newProjectMove);
-
-				// Show the project data after the previous data disappear if this is a vertical carousel
-				if (this.vertical == true) {
-					setTimeout((function(){
-						this.activeNewProjectData(index);
-						
-					}).bind(this), this.dataDuration);
-				};
 
 				// Wait until the new project is in position, then disappear the old active project, update the activeProject var and turn on the 'canScroll' flag again
 				setTimeout((function(){
@@ -155,44 +129,6 @@ function Carousel(sectId, projPrefix, projBarPrefix, carouselOrientation, projBr
 			currentBarMove = 'left';
 			newBarMove = 'right';
 		};
-
-		// Move the current project bar outside the wrapper
-		$(this.projectsBarPrefix + this.activeProject).addClass(currentBarMove);
-
-		// Set the new project bar in position to enter
-		$(this.projectsBarPrefix + index).addClass(newBarMove);
-		$(this.projectsBarPrefix + index).addClass('active');
-
-		// Make a tiny pause (100ms) to set the new project bar in position
-		setTimeout((function(){
-			$(this.projectsBarPrefix + index).removeClass(newBarMove);
-
-			// Wait until the new project bar is in position, then disappear the old active bar
-			setTimeout((function(){
-				$(this.projectsBarPrefix + this.activeProject).removeClass('active');
-				$(this.projectsBarPrefix + this.activeProject).removeClass(currentBarMove);
-			}).bind(this), this.duration);
-		}).bind(this), 100);
-	};
-
-	// The next two functions are ONLY for vertical orientation carousels
-	// There are 3 data to move: Brand Data, Brief Data and Client Data
-	// So, first let's deactive the current showing data
-	this.deactiveProjectData = function(){
-		$(this.projectsBrandPrefix + this.activeProject).removeClass('active');
-		$(this.projectsClientPrefix + this.activeProject).removeClass('active');
-
-		// Right now there is only one type of brief, so we will only disappear and appear the same object
-		$(this.projectsBriefPrefix + '0').removeClass('active');
-	};
-
-	// Then we show the new data
-	this.activeNewProjectData = function(index){
-		$(this.projectsBrandPrefix + index).addClass('active');
-		$(this.projectsClientPrefix + index).addClass('active');
-
-		// Right now there is only one type of brief, so we will only disappear and appear the same object
-		$(this.projectsBriefPrefix + '0').addClass('active'); 
 	};
 
 	// Define the number of slides of each project

@@ -21,7 +21,7 @@
 		screens: [],
 
 		// Set the names of all the screens
-		screenNames: ['wellcome', 'milie-marie', 'das-lab', 'lucky-ideas', 'voxel' ],
+		screenNames: ['modrn-businss', 'wellcome', 'milie-marie', 'das-lab', 'lucky-ideas', 'voxel' ],
 
 		// Set the screen covers id's
 		screenCovers: [],

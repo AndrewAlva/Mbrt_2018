@@ -960,10 +960,10 @@
 						}
 
 						.leftArrow{
-							left: -15%;
+							left: -9%;
 						}
 						.rightArrow{
-							right: -15%;
+							right: -9%;
 						}
 					}
 
@@ -1462,6 +1462,18 @@
 	#mobileWrapper{
 		.vertical{
 			display: block;
+		}
+	}
+}
+
+// Tablet Size special fix for carousel distance with arrows
+@media screen and (min-width: 768px) and (max-width: 900px){
+	#fullWrapper #mbrtWrapper .carouselSection .innerCarousel .carouselImages{
+		.leftArrow{
+			left: -6.5%;
+		}
+		.rightArrow{
+			right: -6.5%;
 		}
 	}
 }

@@ -10,19 +10,22 @@
 		Slider.loading();
 
 		// Set and Initialize all carousels
-			var Wellcome = new Carousel('#section-0', '#wellcome-', '#wellcomeBar-');
+			var ModrnB = new Carousel('#section-0', '#modrn-');
+			ModrnB.init();
+
+			var Wellcome = new Carousel('#section-1', '#wellcome-');
 			Wellcome.init();
 
-			var Milie = new Carousel('#section-1', '#milie-', '#milieBar-');
+			var Milie = new Carousel('#section-2', '#milie-');
 			Milie.init();
 
-			var DasLab = new Carousel('#section-2', '#daslab-', '#daslabBar-');
+			var DasLab = new Carousel('#section-3', '#daslab-');
 			DasLab.init();
 
-			var Lucky = new Carousel('#section-3', '#lucky-', '#luckyBar-');
+			var Lucky = new Carousel('#section-4', '#lucky-');
 			Lucky.init();
 
-			var Voxel = new Carousel('#section-4', '#voxel-', '#voxelBar-');
+			var Voxel = new Carousel('#section-5', '#voxel-');
 			Voxel.init();
 		// END Set and Initialize all carousels
 
@@ -74,22 +77,26 @@
 				event.preventDefault();
 				switch (Slider.sectionActive){
 					case 0:
-						Wellcome.next();
+						ModrnB.next();
 						break;
 
 					case 1:
-						Milie.next();
+						Wellcome.next();
 						break;
 
 					case 2:
-						DasLab.next();
+						Milie.next();
 						break;
 
 					case 3:
-						Lucky.next();
+						DasLab.next();
 						break;
 
 					case 4:
+						Lucky.next();
+						break;
+
+					case 5:
 						Voxel.next();
 				}
 			}
@@ -98,22 +105,26 @@
 				event.preventDefault();
 				switch (Slider.sectionActive){
 					case 0:
-						Wellcome.prev();
+						ModrnB.prev();
 						break;
 
 					case 1:
-						Milie.prev();
+						Wellcome.prev();
 						break;
 
 					case 2:
-						DasLab.prev();
+						Milie.prev();
 						break;
 
 					case 3:
-						Lucky.prev();
+						DasLab.prev();
 						break;
 
 					case 4:
+						Lucky.prev();
+						break;
+
+					case 5:
 						Voxel.prev();
 				}
 			}
@@ -122,22 +133,26 @@
 				
 				switch (Slider.sectionActive){
 					case 0:
-						Wellcome.goTo(index);
+						ModrnB.goTo(index);
 						break;
 
 					case 1:
-						Milie.goTo(index);
+						Wellcome.goTo(index);
 						break;
 
 					case 2:
-						DasLab.goTo(index);
+						Milie.goTo(index);
 						break;
 
 					case 3:
-						Lucky.goTo(index);
+						DasLab.goTo(index);
 						break;
 
 					case 4:
+						Lucky.goTo(index);
+						break;
+
+					case 5:
 						Voxel.goTo(index);
 				}
 			}

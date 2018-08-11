@@ -217,7 +217,8 @@
 
 			#rightBarsNav{
 				position: fixed;
-				width: 100px;
+				// width: 100px;
+				width: 125px; /* Special fix for modrn businss name (too long) */
 				top: 50%;
 				@include translate(0, -50%);
 				right: 0;

@@ -15,10 +15,13 @@
 		instructionsTiming: 4000,
 
 		// Loading portfolio quotes, in this case are the studio quotes
-		mbrtQuotes: ["We are crafting the last details, almost there.", "Good things come to those who know when to wait.", "Thanks for visiting, we were expecting you."],
+		mbrtQuotes: ["Thanks for visiting us, we were expecting you.", "We are crafting the last details, almost there.", "Good things come to those who know when to wait."],
 
 		// Set the array with all the screens to manipulate
 		screens: [],
+
+		// Set the array with all the videos to manipulate
+		videos: [],
 
 		// Set the names of all the screens
 		screenNames: ['modrn-businss', 'wellcome', 'milie-marie', 'das-lab', 'lucky-ideas', 'voxel' ],
@@ -175,6 +178,7 @@
 
 			// Fade out loader
 			$('#mbrtLoader').addClass('crystalLoader');
+			$('#mbrtWrapper').removeClass('crystalLoader');
 			
 			// Remove loader after fadeout is complete
 			setTimeout(function(){$('#mbrtLoader').remove();},1600);
@@ -210,6 +214,11 @@
 			if (Slider.is_Mac) {
 				Slider.sensibility = 10;
 			};
+
+			// Init the array of videos
+			Slider.getVideos('.projectVideo', Slider.videos);
+			// Fix videos size to cover container
+			Slider.fixVideoSize(Slider.videos, '.carouselSection');
 		},
 
 		// Go prev section, only if there is a prev section to go
@@ -430,14 +439,55 @@
 			});	
 		},
 
-		// SPECIFIC SECTION CHAINED ANIMATIONS
+		// Select all slider videos and push them into an array
+		getVideos: function(videosClass, targetArray){
+			$.each($(videosClass), function(index, el) {
+				// Create an object for each element to insert them into the videos array
+				var pseudoObj = {
+					id: index,
+					width: el.width,
+					height: el.height,
+					obj: el
+				};
 
-		// Cover sections [Branding, Brand communication and Web Design & Development]
-		coverAnimation: function(){},
+				// Insert the object with its properties into the array
+				targetArray.push(pseudoObj);
+			});
+		},
 
-		// Carousel sections
-		carouselAnimation: function(){}
+		// Calculate video's needed size to fill it's container
+		getCoverSize: function(videoWidth, videoHeight, containerWidth, containerHeight){
+			var _screen = {
+		            width: containerWidth,
+		            height: containerHeight
+		        },
+		        n = (offsetY = .5, Math.min(_screen.width / videoWidth, _screen.height / videoHeight)),
+		        r = videoWidth * n,
+		        o = videoHeight * n,
+		        a = 1;
 
+		    return r < _screen.width && (a = _screen.width / r), Math.abs(a - 1) < 1e-14 && o < _screen.height && (a = _screen.height / o), r *= a, o *= a, {
+		        width: r,
+		        height: o,
+		        top: -Math.abs(o - _screen.height) / 2,
+		        left: -Math.abs(r - _screen.width) / 2
+		    }
+		},
 
+		// Force videos size to cover container
+		fixVideoSize: function(videosArray, videoContainerSelector){
+			var _containerWidth = $(videoContainerSelector).width();
+			var _containerHeight = $(videoContainerSelector).height();
+
+			$.each(videosArray, function(index, el) {
+				var _newStyle = Slider.getCoverSize(el.width, el.height, _containerWidth, _containerHeight);
+				$(el.obj).css({
+					width: _newStyle.width,
+					height: _newStyle.height,
+					top: _newStyle.top,
+					left: _newStyle.left,
+				});
+			});
+		}
 	}
 

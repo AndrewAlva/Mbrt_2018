@@ -191,7 +191,7 @@ function init() {
     });
 
     $('.mainNavButtons, .navBar, .arrow, .rrssIcon').hover(function(){Point.grow()}, function(){Point.shrink()});
-    $('.visitWebsite').hover(function(){Point.implode()}, function(){Point.shrink()});
+    $('#topLeftLogo, .visitWebsite, #mbrt-form-submit, .button, .simple-link, .discrete-link, .footer a').hover(function(){Point.implode()}, function(){Point.shrink()});
     
     window.addEventListener("mousemove", function(event) {
         mouse = {

@@ -134,6 +134,14 @@
 	        transition: all $timing cubic-bezier(.44,.01,.47,1.16);
 }
 
+@mixin section_slider_transition($timing-transform, $timing-opacity){
+	-webkit-transition: transform $timing-transform cubic-bezier(.35,0,.25,1), opacity $timing-opacity cubic-bezier(.35,0,.25,1);
+	   -moz-transition: transform $timing-transform cubic-bezier(.35,0,.25,1), opacity $timing-opacity cubic-bezier(.35,0,.25,1);
+	    -ms-transition: transform $timing-transform cubic-bezier(.35,0,.25,1), opacity $timing-opacity cubic-bezier(.35,0,.25,1);
+	     -o-transition: transform $timing-transform cubic-bezier(.35,0,.25,1), opacity $timing-opacity cubic-bezier(.35,0,.25,1);
+	        transition: transform $timing-transform cubic-bezier(.35,0,.25,1), opacity $timing-opacity cubic-bezier(.35,0,.25,1);
+}
+
 @mixin opacity($val){
 	opacity: $val;
 	filter: alpha(opacity=($val * 100));

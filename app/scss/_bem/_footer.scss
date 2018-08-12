@@ -95,10 +95,18 @@
 		text-align: center;
 
 		&__label{
+			position: absolute;
 			text-decoration: none;
 			font-size: 12px;
 			color: $black;
 			text-transform: uppercase;
+			@include transitions(.7s);
+			top: 70px;
+			bottom: 0;
+
+			&:hover{
+				@include translate(0, 10px);
+			}
 		}
 	}
 }

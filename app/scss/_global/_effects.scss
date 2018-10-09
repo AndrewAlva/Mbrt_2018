@@ -6,3 +6,29 @@
 .activeTitle{
 	color: #fff !important;
 }
+
+.load-fadein{
+	opacity: 0;
+}
+
+*[intro-delay=".1s"]{@include trans-delayed(.7s, .1s);}
+*[intro-delay=".2s"]{@include trans-delayed(.7s, .2s);}
+*[intro-delay=".3s"]{@include trans-delayed(.7s, .3s);}
+*[intro-delay=".4s"]{@include trans-delayed(.7s, .4s);}
+*[intro-delay=".5s"]{@include trans-delayed(.7s, .5s);}
+*[intro-delay=".6s"]{@include trans-delayed(.7s, .6s);}
+*[intro-delay=".7s"]{@include trans-delayed(.7s, .7s);}
+*[intro-delay=".8s"]{@include trans-delayed(.7s, .8s);}
+*[intro-delay=".9s"]{@include trans-delayed(.7s, .9s);}
+*[intro-delay="1s"]{@include trans-delayed(.7s, 1s);}
+*[intro-delay="1.1s"]{@include trans-delayed(.7s, 1.1s);}
+*[intro-delay="1.2s"]{@include trans-delayed(.7s, 1.2s);}
+*[intro-delay="1.3s"]{@include trans-delayed(.7s, 1.3s);}
+*[intro-delay="1.4s"]{@include trans-delayed(.7s, 1.4s);}
+*[intro-delay="1.5s"]{@include trans-delayed(.7s, 1.5s);}
+*[intro-delay="1.6s"]{@include trans-delayed(.7s, 1.6s);}
+*[intro-delay="1.7s"]{@include trans-delayed(.7s, 1.7s);}
+*[intro-delay="1.8s"]{@include trans-delayed(.7s, 1.8s);}
+*[intro-delay="1.9s"]{@include trans-delayed(.7s, 1.9s);}
+*[intro-delay="1.9s"]{@include trans-delayed(.7s, 1.9s);}
+*[intro-delay="2s"]{@include trans-delayed(.7s, 2s);}

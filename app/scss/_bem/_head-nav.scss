@@ -12,7 +12,7 @@
 		height: 21px;
 		bottom: 5px;
 		cursor: pointer;
-		@include transitions(0.4s);
+		@include transitions(.7s);
 
 		img{
 			position: absolute;

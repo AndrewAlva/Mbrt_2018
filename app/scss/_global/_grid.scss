@@ -1,9 +1,13 @@
 .grid{
 	position: relative;
-	width: 1200px;
+	width: 90%;
 	margin: 0 auto;
 	@include boxSizeFit();
-	padding: 0 15px;
+
+	@media (min-width: 1200px){
+		width: 1200px;
+		padding: 0 15px;
+	}
 
 	&__header{
 		position: relative;
@@ -13,9 +17,13 @@
 	&__text-block{
 		position: relative;
 		overflow: hidden;
-		width: 940px;
+		width: 80%;
 		margin: 0 auto;
 		margin-bottom: 90px;
+
+		@media (min-width: 1200px){
+			width: 940px;
+		}
 	}
 
 	&__row{
@@ -23,6 +31,18 @@
 		overflow: hidden;
 		width: 100%;
 		margin-bottom: 105px;
+
+		&--flex{
+			@media (max-width: 1199px){
+				@include flexIt;
+			}
+		}
+
+		&--flexBottom{
+			@media (max-width: 1199px){
+				@include flexEnd;
+			}
+		}
 
 		&--extended{
 			width: 1200px;

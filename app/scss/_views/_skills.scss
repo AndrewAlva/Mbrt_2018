@@ -8,7 +8,12 @@
 }
 
 #skill-text-01{
-	margin-top: 190px;
-}#skill-text-02{
-	margin-top: 65px;
+	@media (min-width: 1200px){
+		margin-top: 190px;
+	}
+}
+#skill-text-02{
+	@media (min-width: 1200px){
+		margin-top: 65px;
+	}
 }

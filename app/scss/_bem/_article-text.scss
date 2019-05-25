@@ -17,6 +17,10 @@
 	}
 	&--left{
 		margin-left: 85px;
+
+		@media (max-width: 1199px){
+			margin-right: 80px;
+		}
 	}
 
 	&__title{

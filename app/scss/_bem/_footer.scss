@@ -17,18 +17,28 @@
 	}
 
 	&__row{
-		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-		display: -ms-flexbox;      /* TWEENER - IE 10 */
-		display: -webkit-flex;     /* NEW - Chrome */
-		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
-		-webkit-justify-content: space-between;
-		-moz-justify-content: space-between;
-		justify-content: space-between;
-
+		@include flexIt;
+		// @include flexSpaceBetween;
+		@include flexWrap(wrap);
 		@include boxSizeFit();
-		padding: 0 20px 45px 0;
+		// padding: 0 20px 45px 0;
+		padding-bottom: 45px;
+
+		@media (min-width: 768px){
+			@include flexSpaceBetween;
+			@include flexWrap(nowrap);
+		}
+	}
+
+	&__col{
+		width: 100%;
+		&:not(:last-child){margin-bottom: 30px;}
+		&:nth-child(2){width: 100px;}
+
+		@media (min-width: 768px){
+			width: initial;
+			&:not(:last-child){margin-bottom: 0;}
+		}
 	}
 
 	&__subtitles{
@@ -73,13 +83,16 @@
 
 
 	&__legals{
+		height: 84px;
 		text-align: center;
 		font-size: 12px;
+		line-height: 1.5em;
 		color: $lm-gray;
 		padding-top: 20px;
 		padding-bottom: 45px;
 		@include lightFont();
 		border-top: 1px solid $stroke-gray;
+		@include boxSizeFit;
 	}
 
 
@@ -88,12 +101,18 @@
 		position: absolute;
 		width: 21px;
 		height: 100%;
-		top: 0;
-		right: 80px;
+		right: 30px;
+		bottom: 50px;
 		-webkit-writing-mode: vertical-lr;
 		writing-mode: vertical-lr;
 		@include rotate(180deg);
-		text-align: center;
+
+		// @media (min-width: 768px){bottom: 5px;}
+
+		@media (min-width: 1440px){
+			bottom: 0;
+			right: 80px;
+		}
 
 		&__label{
 			position: absolute;
@@ -102,8 +121,7 @@
 			color: $black;
 			text-transform: uppercase;
 			@include transitions(.7s);
-			top: 70px;
-			bottom: 0;
+			top: 84px;
 
 			&:hover{
 				@include translate(0, 10px);

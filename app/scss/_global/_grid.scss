@@ -77,8 +77,11 @@
 	&__row-6col{
 		position: relative;
 		overflow: hidden;
-		width: 570px;
+		width: 100%;
 		margin: 0 auto;
+		@media (min-width: 768px){
+			width: 520px;
+		}
 	}
 	
 	&__row-8col{

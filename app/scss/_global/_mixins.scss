@@ -231,3 +231,9 @@
 	flex-wrap: $wrap;
 }
 
+@mixin flexSpaceBetween{
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+}
+

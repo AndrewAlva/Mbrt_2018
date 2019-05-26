@@ -5,10 +5,13 @@
 	overflow: scroll;
 	padding-top: 160px;
 	@include boxSizeFit();
-}
 
-.aboutBody{
-	margin-bottom: 0;
+	.about-people-text{
+		@media (max-width: 767px){@include flexOrder(0);}
+	}
+	.about-people-img{
+		@media (max-width: 767px){@include flexOrder(9);}
+	}
 }
 
 .about-info-rows{
@@ -17,8 +20,4 @@
 	.photo-helper{
 		width: 340px;
 	}
-}
-
-.about-inner-footer{
-	margin-top: -30px;
 }

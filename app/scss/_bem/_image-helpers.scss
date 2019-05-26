@@ -7,7 +7,9 @@
 		margin-left: 0;
 	}
 	&--right {
-		float: right;
+		@media (min-width: 768px){
+			float: right;
+		}
 	}
 
 	&--3-half-col{
@@ -27,7 +29,9 @@
 	}
 
 	&--lower{
-		margin-top: 33px;
+		@media (min-width: 768px){
+			margin-top: 33px;
+		}
 	}
 
 	img{

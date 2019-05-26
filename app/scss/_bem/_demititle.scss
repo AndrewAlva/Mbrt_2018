@@ -16,8 +16,9 @@
 	&__caption{
 		position: relative;
 		display: inline-block;
-		font-size: 14px;
+		font-size: 12px;
 		color: #000;
+		@media (min-width: 768px){font-size: 14px}
 	}
 	&__caption--gray{
 		@include opacity(0.3);

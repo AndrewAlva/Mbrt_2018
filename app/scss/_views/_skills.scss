@@ -3,8 +3,9 @@
 	width: 100%;
 	height: 100%;
 	overflow: scroll;
-	padding-top: 165px;
+	padding-top: 105px;
 	@include boxSizeFit();
+	@media (min-width: 768px){padding-top: 165px;}
 
 	.article-text{
 		@media (max-width: 767px){@include flexOrder(9);}

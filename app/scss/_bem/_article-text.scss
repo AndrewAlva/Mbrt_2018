@@ -13,8 +13,10 @@
 	}
 
 	&--right{
+		margin-right: 80px;
 		@media (min-width: 768px){
 			margin-left: 100px;
+			margin-right: 0;
 		}
 	}
 	&--left{

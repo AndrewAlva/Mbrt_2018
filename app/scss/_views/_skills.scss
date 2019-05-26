@@ -5,15 +5,33 @@
 	overflow: scroll;
 	padding-top: 165px;
 	@include boxSizeFit();
-}
 
-#skill-text-01{
-	@media (min-width: 1200px){
-		margin-top: 190px;
+	.article-text{
+		@media (max-width: 767px){@include flexOrder(9);}
+		margin-top: 30px;
+		@media (min-width: 768px) and (max-width: 1199px) {margin-top: 0;}
+
+		@media (min-width: 992px) and (max-width: 1199px) {@include flexEnd;}
 	}
-}
-#skill-text-02{
-	@media (min-width: 1200px){
-		margin-top: 65px;
+
+	#skill-img-01, #skill-img-02, #skill-img-03{
+		@media (max-width: 767px){@include flexOrder(0);}
+	}
+
+	#skill-text-01, #skill-text-03{
+		@media (min-width: 1200px){
+			margin-top: 190px;
+		}
+	}
+	#skill-text-02{
+		@media (min-width: 1200px){
+			margin-top: 65px;
+		}
+	}
+
+	.grid__row--flexBottom{
+		@media (min-width: 992px) and (max-width: 1199px){
+			@include flexEnd;
+		}
 	}
 }

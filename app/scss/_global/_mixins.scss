@@ -195,7 +195,7 @@
 	@include trans_before_title(1.2s);
 }
 
-@mixin flexIt(){
+@mixin flexIt{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -203,11 +203,31 @@
 	display: flex;
 }
 
-@mixin flexEnd(){
+@mixin flexEnd{
 	-webkit-box-align: end;
 	-webkit-align-items: flex-end;
 	-moz-box-align: end;
 	-ms-flex-align: end;
 	align-items: flex-end;
+}
+
+@mixin flexStart{
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+@mixin flexOrder($index){
+	-webkit-box-ordinal-group: $index + 1;
+	-webkit-order: $index;
+	-ms-flex-order: $index;
+	order: $index;
+}
+
+@mixin flexWrap($wrap){
+	-webkit-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
 }
 

@@ -13,10 +13,14 @@
 	}
 
 	&--right{
-		margin-left: 100px;
+		@media (min-width: 768px){
+			margin-left: 100px;
+		}
 	}
 	&--left{
-		margin-left: 85px;
+		@media (min-width: 1200px){
+			margin-left: 85px;
+		}
 
 		@media (max-width: 1199px){
 			margin-right: 80px;

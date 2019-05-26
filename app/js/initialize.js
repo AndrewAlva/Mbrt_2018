@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		require('./loaded-page');
 
 		// Get noise background effect
-		require('./canvas');
+		// require('./canvas');
 
 		// Get form interactions js
 		require('./form');

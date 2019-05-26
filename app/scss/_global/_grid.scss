@@ -33,16 +33,25 @@
 		margin-bottom: 105px;
 
 		&--flex{
+			@media (max-width: 767px){
+				@include flexWrap(wrap);
+			}
+
 			@media (max-width: 1199px){
 				@include flexIt;
 			}
 		}
 
-		&--flexBottom{
-			@media (max-width: 1199px){
-				@include flexEnd;
-			}
-		}
+		// &--flexBottom{
+		// 	@media (max-width: 1199px){
+		// 		@include flexEnd;
+		// 	}
+		// }
+		// &--flexTop{
+		// 	@media (max-width: 1199px){
+		// 		@include flexStart;
+		// 	}
+		// }
 
 		&--extended{
 			width: 1200px;

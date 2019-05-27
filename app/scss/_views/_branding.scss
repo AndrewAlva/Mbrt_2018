@@ -5,8 +5,36 @@
 	overflow: scroll;
 	padding-top: 115px;
 	@include boxSizeFit();
+
+	.grid__row--extended{
+		@media (max-width: 991px){
+			margin-bottom: 30px;
+		}
+	}
+
+	.brand-people-text{
+		@media (max-width: 767px){@include flexOrder(0);}
+	}
+	.brand-people-img{
+		@media (max-width: 767px){@include flexOrder(9);}
+	}
 }
 
 #brandingBody{
 	margin-bottom: 0;
+
+	.grid__row-8col{
+		@media (max-width: 768px){
+			margin-bottom: 50px;
+		}
+		@media (min-width: 992px){
+			margin-bottom: 110px;
+		}
+	}
+
+	.article-text__paragraph--no-margin{
+		@media (max-width: 768px){
+			margin-bottom: 36px;
+		}
+	}
 }
